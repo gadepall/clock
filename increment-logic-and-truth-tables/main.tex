@@ -1,0 +1,214 @@
+\section{Increment Logic and Truth Tables}
+
+\subsection{Seconds Ones (0-9)}
+\input{increment-logic-and-truth-tables/tables/table4.tex}
+
+\begin{karnaugh-map}[4][4][1][][]
+    \maxterms{1,3,5,7,9}
+    \minterms{0,2,4,6,8}
+    \indeterminants{10,11,12,13,14,15}
+
+    \implicantedge{0}{8}{2}{10}
+    \draw[color=black, ultra thin] (0, 4) --
+        node [pos=0.7, above right, anchor=south west] {$XW$}
+        node [pos=0.7, below left, anchor=north east] {$ZY$} 
+        ++(135:1);
+\end{karnaugh-map}
+\begin{align}
+    A &= W_1' \notag
+\end{align}
+
+\begin{karnaugh-map}[4][4][1][][]
+    \minterms{1,2,5,6}
+    \maxterms{0,3,4,7,8,9}
+    \indeterminants{10,11,12,13,14,15}
+
+    \implicant{1}{5}
+    \implicant{2}{10}
+
+    \draw[color=black, ultra thin] (0, 4) --
+        node [pos=0.7, above right, anchor=south west] {$XW$}
+        node [pos=0.7, below left, anchor=north east] {$ZY$} 
+        ++(135:1);
+\end{karnaugh-map}
+\begin{align}
+    B &= (W_1 X_1' Z_1') + (W_1' X_1) \notag
+\end{align}
+
+\begin{karnaugh-map}[4][4][1][][]
+    \minterms{3,4,5,6}
+    \maxterms{0,1,2,7,8,9}
+    \indeterminants{10,11,12,13,14,15}
+
+    \implicant{4}{5}    
+    \implicant{3}{3}
+    \implicantedge{4}{4}{6}{6}   
+
+    \draw[color=black, ultra thin] (0, 4) --
+        node [pos=0.7, above right, anchor=south west] {$XW$}
+        node [pos=0.7, below left, anchor=north east] {$ZY$} 
+        ++(135:1);
+\end{karnaugh-map}
+\begin{align}
+    C &= (X_1' Y_1) + (W_1' Y_1) + (W_1 X_1 Y_1') \notag
+\end{align}
+
+\begin{karnaugh-map}[4][4][1][][]
+    \minterms{7,8}
+    \maxterms{0,1,2,3,4,6,5,9}
+    \indeterminants{10,11,12,13,14,15}
+
+    \implicant{7}{15}    
+    \implicantedge{12}{8}{14}{10}   
+
+    \draw[color=black, ultra thin] (0, 4) --
+        node [pos=0.7, above right, anchor=south west] {$XW$}
+        node [pos=0.7, below left, anchor=north east] {$ZY$} 
+        ++(135:1);
+\end{karnaugh-map}
+
+\begin{align}
+    D &= (W_1' Z_1) + (W_1 X_1 Y_1) \notag
+\end{align}
+
+\subsection{Seconds Tens (0-5)}
+\input{increment-logic-and-truth-tables/tables/table5.tex}
+
+\begin{karnaugh-map}[4][4][1][][]
+    \maxterms{1,3,5}
+    \minterms{0,2,4}
+    \indeterminants{6,7,8,9,10,11,12,13,14,15}
+
+    \implicantedge{0}{8}{2}{10}
+    \draw[color=black, ultra thin] (0, 4) --
+        node [pos=0.7, above right, anchor=south west] {$XW$}
+        node [pos=0.7, below left, anchor=north east] {$ZY$} 
+        ++(135:1);
+\end{karnaugh-map}
+\begin{align}
+    A &= W_2' \notag
+\end{align}
+
+\begin{karnaugh-map}[4][4][1][][]
+    \maxterms{0,4,3,5}
+    \minterms{1,2}
+    \indeterminants{6,7,8,9,10,11,12,13,14,15}
+
+    \implicant{2}{10}
+    \implicantedge{1}{1}{9}{9}
+
+    \draw[color=black, ultra thin] (0, 4) --
+        node [pos=0.7, above right, anchor=south west] {$XW$}
+        node [pos=0.7, below left, anchor=north east] {$ZY$} 
+        ++(135:1);
+\end{karnaugh-map}
+\begin{align}
+    B &= (W_2 X_2' Y_2') + (W_2' X_2) \notag
+\end{align}
+
+\begin{karnaugh-map}[4][4][1][][]
+    \maxterms{0,1,2,5}
+    \minterms{3,4}
+    \indeterminants{6,7,8,9,10,11,12,13,14,15}
+
+    \implicant{4}{8}
+    \implicant{3}{11}
+
+    \draw[color=black, ultra thin] (0, 4) --
+        node [pos=0.7, above right, anchor=south west] {$XW$}
+        node [pos=0.7, below left, anchor=north east] {$ZY$} 
+        ++(135:1);
+\end{karnaugh-map}
+\begin{align}
+    C &= (W_2 X_2) + (W_2' X_2' Y_2) \notag
+\end{align}
+
+\begin{align}
+    D &= 0 \notag
+\end{align}
+
+\subsection{Minutes Ones (0-9)}
+\textit{Same as Seconds Ones with W3/X3/Y3/Z3.}
+
+\subsection{Minutes Tens (0-5)}
+\textit{Same as Seconds Tens with W4/X4/Y4/Z4.}
+
+\subsection{Hours Ones }
+\textbf{I. Tens = 0/1 → 0-9 }\\
+\textit{Same as Seconds Ones with W5/X5/Y5/Z5.}
+
+\textbf{II. Tens = 2 → 0-3 }
+\input{increment-logic-and-truth-tables/tables/table6.tex}
+
+\begin{karnaugh-map}[2][2][1][][]
+    \minterms{0,2}
+    \maxterms{3,1}
+
+    \implicant{0}{2}
+    \draw[color=black, ultra thin] (0, 2) --
+        node [pos=0.7, above right, anchor=south west] {$W$}
+        node [pos=0.7, below left, anchor=north east] {$X$} 
+        ++(135:1);
+\end{karnaugh-map}
+\begin{align}
+    A &= W_5' \notag
+\end{align}
+
+\begin{karnaugh-map}[2][2][1][][]
+    \minterms{1,2}
+    \maxterms{3,0}
+
+    \implicant{1}{1}
+    \implicant{2}{2}
+
+    \draw[color=black, ultra thin] (0, 2) --
+        node [pos=0.7, above right, anchor=south west] {$W$}
+        node [pos=0.7, below left, anchor=north east] {$X$} 
+        ++(135:1);
+\end{karnaugh-map}
+\begin{align}
+    B &= (W_5 X_5') + (W_5' X_5) \notag
+\end{align}
+
+\begin{align}
+    C &= 0 \notag\\
+    D &= 0 \notag
+\end{align}
+
+\subsection{Hours Tens (0-2)}
+\input{increment-logic-and-truth-tables/tables/table7.tex}
+
+\begin{karnaugh-map}[2][2][1][][]
+    \minterms{0}
+    \maxterms{2,1}
+    \indeterminants{3}
+
+    \implicant{0}{0}
+    \draw[color=black, ultra thin] (0, 2) --
+        node [pos=0.7, above right, anchor=south west] {$W$}
+        node [pos=0.7, below left, anchor=north east] {$X$} 
+        ++(135:1);
+\end{karnaugh-map}
+\begin{align}
+    A &= W_6' X_6' \notag
+\end{align}
+
+\begin{karnaugh-map}[2][2][1][][]
+    \minterms{1}
+    \maxterms{2,0}
+    \indeterminants{3}
+
+    \implicant{1}{1}
+    \draw[color=black, ultra thin] (0, 2) --
+        node [pos=0.7, above right, anchor=south west] {$W$}
+        node [pos=0.7, below left, anchor=north east] {$X$} 
+        ++(135:1);
+\end{karnaugh-map}
+\begin{align}
+    B &= W_6 X_6' \notag
+\end{align}
+
+\begin{align}
+    C &= 0 \notag\\
+    D &= 0 \notag
+\end{align}

@@ -1,0 +1,30 @@
+\section{Execution}
+\subsection{Upload Code to Arduino}
+\begin{enumerate}
+    \item Connect Arduino to computer via USB
+    \item Open Arduino IDE
+    \item Copy the provided code into a new sketch
+    \item Select the correct board and port
+    \item Upload the code
+\end{enumerate}
+
+\subsection{Hardware Build}
+\begin{itemize}
+    \item Connect the seven-segment displays to the breadboard
+    \item Connect all segment outputs together (through resistors)
+    \item Make connections to the IC7447 according to Table 3.0
+    \item Connect the IC7447 and the buttons to the Arduino according to Table 2.0
+    \item Add appropriate current-limiting resistors for LEDs and pull-down resistors for buttons
+\end{itemize}
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=0.5\textwidth]{figs/clock.jpg}
+\caption{Final Arduino-based Clock Implementation}
+\end{figure}
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=0.45\textwidth]{figs/Clock_Tinkercad.png}
+\caption{Tinkercad Simulation of the Digital Clock}
+\end{figure}

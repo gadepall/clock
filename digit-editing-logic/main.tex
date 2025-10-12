@@ -1,0 +1,11 @@
+\section{Digit Editing Logic}
+The clock allows pausing and digit-by-digit editing:
+
+\begin{enumerate}
+    \item Press PAUSE (D10) to toggle run/edit mode. In edit mode, the clock stops.
+    \item Press NEXT (D11) to select the digit to edit (cycles 0-5: sec1, sec10, min1, min10, hr1, hr10).
+    \item Press INC (D12) to increment the selected digit with rollovers.
+    \item Press DEC (D13) to decrement the selected digit with rollunders.
+    \item Selected digit blinks every 500ms to indicate focus.
+\end{enumerate}
+
