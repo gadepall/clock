@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1760679757.74651 "main.tex" "main.pdf" "main" 1760679762.21751 0
+["pdflatex"] 1760791195.07941 "main.tex" "main.pdf" "main" 1760791199.40685 0
   "/data/data/com.termux/files/usr/share/texlive/2024/texmf-dist/web2c/texmf.cnf" 1732349492 41853 2b73c63470c7e12c8da3e240c522deac ""
   "/data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
@@ -186,9 +186,9 @@
   "increment-logic-and-truth-tables/tables/table6.tex" 1760338081 216 31779c21c9187a0f007f4ed75dbca563 ""
   "increment-logic-and-truth-tables/tables/table7.tex" 1760338081 191 df8b09edc439c13eee391bf588f090fd ""
   "introduction/main.tex" 1760626056 800 70fc925dc05902d53c5df7b4d3840de9 ""
-  "main.aux" 1760679762 3939 95dbaea0907fe554441753e530ef027a "pdflatex"
-  "main.out" 1760679762 4105 cd99902f53db96239fdad172f005cd3a "pdflatex"
-  "main.tex" 1760679755 1074 9a7e661d6ae92750820e8a129aed7c64 ""
+  "main.aux" 1760791199 3939 95dbaea0907fe554441753e530ef027a "pdflatex"
+  "main.out" 1760791199 4105 cd99902f53db96239fdad172f005cd3a "pdflatex"
+  "main.tex" 1760791187 1084 6dbd437e54168fe80d07893c442b43f8 ""
   "multiplexing/main.tex" 1760338081 307 2ba5b9503676f8e01ed0e01feb2484a6 ""
   "references/main.tex" 1760626056 511 7d2a2071e05648a7d2964330ce37cceb ""
   "software-implementation/main.tex" 1760338081 438 1abf864dc9f0f3ee585b3244044edd6e ""
