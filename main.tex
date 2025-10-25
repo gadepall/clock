@@ -25,8 +25,25 @@
 \maketitle
 
 % ---------------- Sections ----------------
-\input{abstract/main.tex}
-\input{introduction/main.tex}
+\begin{abstract}
+In this paper the design and implementation of a feature-rich digital clock is demonstrated. The system uses multiplexing to drive six seven-segment displays efficiently, minimizing I/O utilization. Key functionalities include timekeeping, digit-by-digit editing, and pause/play control. Boolean-based increment and decrement logic ensures more accurate cascading of seconds, minutes, and hours within standard constraints. The hardware setup, complemented by software debouncing and display refreshing, demonstrates a reliable, compact, and user-interactive digital clock suitable for both educational and practical applications.
+\end{abstract}
+\section{Introduction}
+Digital timekeeping has long been a critical component of electronic system design, with classical digital design principles thoroughly discussed in foundational works such as \cite{mano2013digital, malvino2017digital, patterson2014computer}. The advent of microcontroller platforms, particularly Arduino, has enabled the development of compact, programmable clocks with enhanced user interactivity \cite{arduino_reference}. Techniques such as BCD-to-seven-segment interfacing and display multiplexing allow efficient utilization of limited I/O resources while maintaining accurate visual representation \cite{ti7447datasheet}. Inspired by these principles, a simple state machine representing a decade counter is  implemented in \cite{ddta}.  Based 
+on this, 
+we design an Arduino-based digital clock featuring six-digit multiplexed displays, pause/play functionality, and digit-by-digit editing with Boolean logic-driven increment and decrement operations.
+
+%\input{abstract/main.tex}
+%\input{introduction/main.tex}
+\section{The Digital Clock}
+See 
+Table \ref{tab:component}.
+\begin{table}[!h]
+\centering
+\input{tables/table1}
+\caption{Table 1.0: Components List}
+\label{tab:component}
+\end{table}
 \input{components/main.tex}
 \input{circuit-connections/main.tex}
 \input{multiplexing/main.tex}
