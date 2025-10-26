@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex main"] 1761367997.50142 "main.aux" "main.bbl" "main" 1761368045.54574 0
+["bibtex main"] 1761456654.22289 "main.aux" "main.bbl" "main" 1761456686.14868 0
   "./references/references.bib" 1761367392 1179 c2de600f972812a63bd7234357582ea5 ""
   "/data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/bibtex/bst/ieeetran/IEEEtran.bst" 1440712899 57748 7c8250ecf02814ce6ddc0cdbb63df1dd ""
-  "main.aux" 1761368045 4716 fa60a0c58b92c9fab4c04db817941ab6 "pdflatex"
+  "main.aux" 1761456685 4697 05d045950e4f1bae26a5fd900a5f4dc5 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1761368040.73597 "main.tex" "main.pdf" "main" 1761368045.54721 0
+["pdflatex"] 1761456681.41206 "main.tex" "main.pdf" "main" 1761456686.15024 0
   "/data/data/com.termux/files/usr/share/texlive/2024/texmf-dist/web2c/texmf.cnf" 1732349492 41853 2b73c63470c7e12c8da3e240c522deac ""
   "/data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
@@ -183,7 +183,6 @@
   "circuit-connections/main.tex" 1760338081 516 f01ec08148959a77c0d5e97cd51edd9f ""
   "circuit-connections/tables/table2.tex" 1760338081 724 13f8639406f8997da334dd45dbd1c8da ""
   "circuit-connections/tables/table3.tex" 1760338081 520 55e9c9c985e8978b3e1f0e5eaa6787f5 ""
-  "components/main.tex" 1761367796 21 756d30fe2d61010c77ae7b58ae18ed44 ""
   "constraints-explanation/main.tex" 1760338081 359 723c4c5690a6a08de020898862e0664d ""
   "control-implementation/main.tex" 1760338081 595 30b6b68ee6c27c62496eaecbe2f9914c ""
   "decrement-logic/main.tex" 1760338081 5432 ad9999a2d59fd6f4364d177709cd6f86 ""
@@ -192,7 +191,7 @@
   "decrement-logic/tables/table8.tex" 1760338081 451 0fd424e09859d4da183df65c9eced9d6 ""
   "decrement-logic/tables/table9.tex" 1760338081 323 635d3390088f9c7ea0141821309887ca ""
   "digit-editing-logic/main.tex" 1760338081 521 ea8d348683ceb7233bd542bf683c90bb ""
-  "execution/main.tex" 1760679146 1275 d28b1baf4609c75b67130d23a63518e4 ""
+  "execution/main.tex" 1761456475 1115 5bb5d8bd044ad15f3915e15e64f205ba ""
   "figs/Clock_Tinkercad.png" 1760338081 188040 cb23ce05d5cae856824c5f37746cdb10 ""
   "figs/clock.jpg" 1760338081 1599739 ac5bcf3d26ae5ef330e50f68e232d3cd ""
   "future-scope/main.tex" 1760626056 505 0cb7fd34e33759151ed37aa331b5e2b8 ""
@@ -201,10 +200,10 @@
   "increment-logic-and-truth-tables/tables/table5.tex" 1760338081 323 cfa1b6c46ef6e4d3589d8c7178ef43a0 ""
   "increment-logic-and-truth-tables/tables/table6.tex" 1760338081 216 31779c21c9187a0f007f4ed75dbca563 ""
   "increment-logic-and-truth-tables/tables/table7.tex" 1760338081 191 df8b09edc439c13eee391bf588f090fd ""
-  "main.aux" 1761368045 4716 fa60a0c58b92c9fab4c04db817941ab6 "pdflatex"
-  "main.bbl" 1761367997 1971 861cebe1c3cb3d61b63f36cf78caa082 "bibtex main"
-  "main.out" 1761368045 4336 49d52f30760d3e38053a21bbea3d1e45 "pdflatex"
-  "main.tex" 1761368039 3084 cfafe7b340cbc9487150dfed30dfc8e8 ""
+  "main.aux" 1761456685 4697 05d045950e4f1bae26a5fd900a5f4dc5 "pdflatex"
+  "main.bbl" 1761456654 1971 861cebe1c3cb3d61b63f36cf78caa082 "bibtex main"
+  "main.out" 1761456685 4241 70f04b5b965aaf14a77e86b78aa8c8ce "pdflatex"
+  "main.tex" 1761456680 3370 53fc6a4cf88c7a5044a9fa20b3c3ce4a ""
   "multiplexing/main.tex" 1760338081 307 2ba5b9503676f8e01ed0e01feb2484a6 ""
   "software-implementation/main.tex" 1760338081 438 1abf864dc9f0f3ee585b3244044edd6e ""
   "tables/table1.tex" 1761367910 393 c349abbecc800952bc2e3a77cf6ad789 ""

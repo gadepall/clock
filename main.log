@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Termux) (preloaded format=pdflatex 2025.4.4)  25 OCT 2025 10:24
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Termux) (preloaded format=pdflatex 2025.4.4)  26 OCT 2025 11:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -852,6 +852,11 @@ Package hyperref Info: Link coloring OFF on input line 24.
 \@outlinefile=\write4
 \openout4 = `main.out'.
 
+<figs/Clock_Tinkercad.png, id=126, 780.9175pt x 494.84875pt>
+File: figs/Clock_Tinkercad.png Graphic file (type png)
+<use figs/Clock_Tinkercad.png>
+Package pdftex.def Info: figs/Clock_Tinkercad.png  used on input line 43.
+(pdftex.def)             Requested size: 232.19843pt x 147.13438pt.
 (./tables/table1.tex
 LaTeX Font Info:    Trying to load font information for U+msa on input line 1.
 
@@ -864,19 +869,25 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 1.
 (/data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/tex/latex/amsfon
 ts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)) (./components/main.tex) (./circuit-connections/main.tex (./circuit-connectio
-ns/tables/table2.tex)
+)) (./circuit-connections/main.tex
 
-(./circuit-connections/tables/table3.tex)) (./multiplexing/main.tex) (./digit-e
-diting-logic/main.tex
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+(./circuit-connections/tables/table2.tex
+
+) (./circuit-connections/tables/table3.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 
 [1{/data/data/com.termux/files/usr/share/texlive/2025/texmf-var/fonts/map/pdfte
 x/updmap/pdftex.map}{/data/data/com.termux/files/usr/share/texlive/2025/texmf-d
 ist/fonts/enc/dvips/base/8r.enc}
 
 
-]) (./constraints-explanation/main.tex) (./increment-logic-and-truth-tables/mai
-n.tex (./increment-logic-and-truth-tables/tables/table4.tex)
+ <./figs/Clock_Tinkercad.png>])) (./multiplexing/main.tex) (./digit-editing-log
+ic/main.tex) (./constraints-explanation/main.tex) (./increment-logic-and-truth-
+tables/main.tex (./increment-logic-and-truth-tables/tables/table4.tex)
 
 Package karnaugh-map Warning: The API for specifying variable labels have been 
 updated. You are currently using the old API(v1). In the new API each variable 
@@ -890,6 +901,8 @@ label is specified separately. See the documentation for more details. Backward
 \@karnaughmap@local@coordinateonecounter@=\count346
 \@karnaughmap@local@coordinatetwocounter@=\count347
 
+
+
 Package karnaugh-map Warning: The API for specifying variable labels have been 
 updated. You are currently using the old API(v1). In the new API each variable 
 label is specified separately. See the documentation for more details. Backward
@@ -899,11 +912,6 @@ label is specified separately. See the documentation for more details. Backward
 \@karnaughmap@local@southeast@=\count349
 \@karnaughmap@local@northwest@=\count350
 \@karnaughmap@local@southeast@=\count351
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
 
 Package karnaugh-map Warning: The API for specifying variable labels have been 
 updated. You are currently using the old API(v1). In the new API each variable 
@@ -934,12 +942,12 @@ label is specified separately. See the documentation for more details. Backward
 \@karnaughmap@local@coordinatetwocounter@=\count367
 \@karnaughmap@local@coordinateonecounter@=\count368
 \@karnaughmap@local@coordinatetwocounter@=\count369
-(./increment-logic-and-truth-tables/tables/table5.tex
-Underfull \vbox (badness 2617) has occurred while \output is active []
+
+Underfull \vbox (badness 4832) has occurred while \output is active []
 
 
 
-[2])
+[2] (./increment-logic-and-truth-tables/tables/table5.tex)
 
 Package karnaugh-map Warning: The API for specifying variable labels have been 
 updated. You are currently using the old API(v1). In the new API each variable 
@@ -967,6 +975,11 @@ label is specified separately. See the documentation for more details. Backward
 \@karnaughmap@local@coordinateonecounter@=\count382
 \@karnaughmap@local@coordinatetwocounter@=\count383
 
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+
 Package karnaugh-map Warning: The API for specifying variable labels have been 
 updated. You are currently using the old API(v1). In the new API each variable 
 label is specified separately. See the documentation for more details. Backward
@@ -976,11 +989,6 @@ label is specified separately. See the documentation for more details. Backward
 \@karnaughmap@local@southeast@=\count385
 \@karnaughmap@local@northwest@=\count386
 \@karnaughmap@local@southeast@=\count387
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
 LaTeX Info: Symbol \textrightarrow not provided by
             font family ptm in TS1 encoding.
             Default family used instead on input line 137.
@@ -990,25 +998,22 @@ LaTeX Info: Symbol \textrightarrow not provided by
 (./increment-logic-and-truth-tables/tables/table6.tex)
 \@karnaughmap@local@northwest@=\count388
 \@karnaughmap@local@southeast@=\count389
+
+
+[3{/data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/fonts/enc/dvip
+s/cm-super/cm-super-ts1.enc}]
 \@karnaughmap@local@northwest@=\count390
 \@karnaughmap@local@southeast@=\count391
 \@karnaughmap@local@northwest@=\count392
 \@karnaughmap@local@southeast@=\count393
-
-Underfull \vbox (badness 1052) has occurred while \output is active []
-
-
-
-[3{/data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/fonts/enc/dvip
-s/cm-super/cm-super-ts1.enc}] (./increment-logic-and-truth-tables/tables/table7
-.tex)
+(./increment-logic-and-truth-tables/tables/table7.tex)
 \@karnaughmap@local@northwest@=\count394
 \@karnaughmap@local@southeast@=\count395
 \@karnaughmap@local@northwest@=\count396
 \@karnaughmap@local@southeast@=\count397
-) (./decrement-logic/main.tex (./decrement-logic/tables/table8.tex
 
-)
+
+) (./decrement-logic/main.tex (./decrement-logic/tables/table8.tex)
 
 Package karnaugh-map Warning: The API for specifying variable labels have been 
 updated. You are currently using the old API(v1). In the new API each variable 
@@ -1045,9 +1050,6 @@ label is specified separately. See the documentation for more details. Backward
 \@karnaughmap@local@southeast@=\count413
 \@karnaughmap@local@northwest@=\count414
 \@karnaughmap@local@southeast@=\count415
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
 
 
 [4]
@@ -1148,7 +1150,7 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 5--9
 
 
 [6]
-<figs/clock.jpg, id=183, 2782.395pt x 2304.61pt>
+<figs/clock.jpg, id=184, 2782.395pt x 2304.61pt>
 File: figs/clock.jpg Graphic file (type jpg)
 <use figs/clock.jpg>
 Package pdftex.def Info: figs/clock.jpg  used on input line 24.
@@ -1158,11 +1160,6 @@ Overfull \hbox (6.0pt too wide) in paragraph at lines 24--25
  [][] 
  []
 
-<figs/Clock_Tinkercad.png, id=184, 780.9175pt x 494.84875pt>
-File: figs/Clock_Tinkercad.png Graphic file (type png)
-<use figs/Clock_Tinkercad.png>
-Package pdftex.def Info: figs/Clock_Tinkercad.png  used on input line 30.
-(pdftex.def)             Requested size: 232.19843pt x 147.13438pt.
 ) (./future-scope/main.tex) (./main.bbl
 
 )
@@ -1179,19 +1176,19 @@ Before submitting the final camera ready copy, remember to:
 
 
 
-[7 <./figs/clock.jpg> <./figs/Clock_Tinkercad.png>] (./main.aux)
+[7 <./figs/clock.jpg>] (./main.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 49D52F30760D3E38053A21BBEA3D1E45;4336.
+(rerunfilecheck)             Checksum: 70F04B5B965AAF14A77E86B78AA8C8CE;4241.
  ) 
 Here is how much of TeX's memory you used:
- 24947 strings out of 473197
- 486528 string characters out of 5701897
- 959897 words of memory out of 5000000
- 47695 multiletter control sequences out of 15000+600000
+ 24940 strings out of 473197
+ 486385 string characters out of 5701897
+ 961026 words of memory out of 5000000
+ 47692 multiletter control sequences out of 15000+600000
  597621 words of font info for 110 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,14n,105p,784b,1004s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1210,10 +1207,10 @@ ve/2025/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></data/data/com.termux/fil
 es/usr/share/texlive/2025/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></data/da
 ta/com.termux/files/usr/share/texlive/2025/texmf-dist/fonts/type1/urw/times/utm
 ri8a.pfb>
-Output written on main.pdf (7 pages, 1884958 bytes).
+Output written on main.pdf (7 pages, 1884604 bytes).
 PDF statistics:
- 274 PDF objects out of 1000 (max. 8388607)
- 237 compressed objects within 3 object streams
- 66 named destinations out of 1000 (max. 500000)
- 255 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 271 PDF objects out of 1000 (max. 8388607)
+ 234 compressed objects within 3 object streams
+ 65 named destinations out of 1000 (max. 500000)
+ 247 words of extra memory for PDF output out of 10000 (max. 10000000)
 
