@@ -7,8 +7,9 @@
 \citation{ti7447datasheet}
 \citation{ddta}
 \@writefile{toc}{\contentsline {section}{\numberline {I}Introduction}{1}{section.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {II}Hardware Setup}{1}{section.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {III}Multiplexing Technique}{1}{section.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {II}Clock Functionality and Hardware Setup}{1}{section.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {III}Clock Logic}{1}{section.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {IV}Constraints Explanation}{1}{section.4}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Tinkercad Simulation of the Digital Clock}}{1}{figure.1}\protected@file@percent }
 \newlabel{fig:tinker}{{1}{1}{Tinkercad Simulation of the Digital Clock}{figure.1}{}}
 \@writefile{lot}{\contentsline {table}{\numberline {I}{\ignorespaces Components List}}{1}{table.1}\protected@file@percent }
@@ -17,28 +18,27 @@
 \newlabel{tab:2.1}{{II}{1}{Button to Arduino Connections}{table.2}{}}
 \@writefile{lot}{\contentsline {table}{\numberline {III}{\ignorespaces IC 7447 to Arduino Connections}}{1}{table.3}\protected@file@percent }
 \newlabel{tab:2.2}{{III}{1}{IC 7447 to Arduino Connections}{table.3}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {IV}Digit Editing Logic}{1}{section.4}\protected@file@percent }
 \@writefile{lot}{\contentsline {table}{\numberline {IV}{\ignorespaces Display to Arduino Connections}}{2}{table.4}\protected@file@percent }
 \newlabel{tab:2.3}{{IV}{2}{Display to Arduino Connections}{table.4}{}}
 \@writefile{lot}{\contentsline {table}{\numberline {V}{\ignorespaces BCD to 7-Segment Connections}}{2}{table.5}\protected@file@percent }
 \newlabel{tab:3}{{V}{2}{BCD to 7-Segment Connections}{table.5}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {V}Constraints Explanation}{2}{section.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {VI}Increment Logic and Truth Tables}{2}{section.6}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VI-A}}Seconds Ones (0-9)}{2}{subsection.6.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VI-B}}Seconds Tens (0-5)}{3}{subsection.6.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VI-C}}Minutes Ones (0-9)}{3}{subsection.6.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VI-D}}Minutes Tens (0-5)}{3}{subsection.6.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VI-E}}Hours Ones }{3}{subsection.6.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VI-F}}Hours Tens (0-2)}{4}{subsection.6.6}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {VII}Decrement Logic}{4}{section.7}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VII-A}}Seconds Ones (0-9)}{4}{subsection.7.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VII-B}}Seconds Tens (0-5)}{5}{subsection.7.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VII-C}}Minutes Ones (0-9)}{5}{subsection.7.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VII-D}}Minutes Tens (0-5)}{6}{subsection.7.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VII-E}}Hours Ones }{6}{subsection.7.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VII-F}}Hours Tens (0-2)}{6}{subsection.7.6}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {VIII}Control Implementation}{6}{section.8}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {IX}Software Implementation}{6}{section.9}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {V}Increment Logic and Truth Tables}{2}{section.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {V-A}}Seconds Ones (0-9)}{2}{subsection.5.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {V-B}}Seconds Tens (0-5)}{3}{subsection.5.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {V-C}}Minutes Ones (0-9)}{3}{subsection.5.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {V-D}}Minutes Tens (0-5)}{3}{subsection.5.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {V-E}}Hours Ones }{3}{subsection.5.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {V-F}}Hours Tens (0-2)}{4}{subsection.5.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {VI}Decrement Logic}{4}{section.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VI-A}}Seconds Ones (0-9)}{4}{subsection.6.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VI-B}}Seconds Tens (0-5)}{5}{subsection.6.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VI-C}}Minutes Ones (0-9)}{5}{subsection.6.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VI-D}}Minutes Tens (0-5)}{6}{subsection.6.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VI-E}}Hours Ones }{6}{subsection.6.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {VI-F}}Hours Tens (0-2)}{6}{subsection.6.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {VII}Multiplexing Technique}{6}{section.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {VIII}Digit Editing Logic}{6}{section.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {IX}Control Implementation}{6}{section.9}\protected@file@percent }
 \bibstyle{IEEEtran}
 \bibdata{references/references}
 \bibcite{mano2013digital}{1}
@@ -47,9 +47,10 @@
 \bibcite{arduino_reference}{4}
 \bibcite{ti7447datasheet}{5}
 \bibcite{ddta}{6}
-\@writefile{toc}{\contentsline {section}{\numberline {X}Execution}{7}{section.10}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {X-A}}Upload Code to Arduino}{7}{subsection.10.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {X-B}}Hardware Build}{7}{subsection.10.2}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Final Arduino-based Clock Implementation}}{7}{figure.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {X}Software Implementation}{7}{section.10}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {XI}Execution}{7}{section.11}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {XI-A}}Upload Code to Arduino}{7}{subsection.11.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {XI-B}}Hardware Build}{7}{subsection.11.2}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{References}{7}{section*.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Final Arduino-based Clock Implementation}}{7}{figure.2}\protected@file@percent }
 \gdef \@abspage@last{7}
