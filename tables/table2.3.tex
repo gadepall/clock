@@ -2,16 +2,26 @@
 \hline
 Display & Arduino Pin & Description\\
 \hline
-1  & D4 & Hours Tens Digit\\
+%1  & D4 & Hours Tens Digit\\
+1  & D4 & Counts 0-2 \\
 \hline
-2  & D5 & Hours Units Digit\\
+2  & D5 & Counts 
+$
+\begin{cases}
+	0-3 & display 1 = 2, \\
+	0-9 & otherwise
+	%0-3 if display 1 is 2, else 0-9 \\
+\end{cases}
+$
+\\
 \hline
-3  & D6 & Minutes Tens Digit\\
+3  & D6 & Counts 0-5 \\
 \hline
-4  & D7 & Minutes Units Digit\\
+4  & D7 & Counts 0-9 \\
 \hline
-5 & D8 & Seconds Tens Digit\\
+5 & D8 & Counts 0-5 \\
 \hline
-6  & D9 & Seconds Units Digit\\
+%6  & D9 & Seconds Units Digit\\
+6  & D9 & Counts 0-9 \\
 \hline
 \end{tabular}
