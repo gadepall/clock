@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex main"] 1761663269.50219 "main.aux" "main.bbl" "main" 1761663272.98084 0
+["bibtex main"] 1761663914.65889 "main.aux" "main.bbl" "main" 1761663918.20526 0
   "./references/references.bib" 1761367392 1179 c2de600f972812a63bd7234357582ea5 ""
   "/data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/bibtex/bst/ieeetran/IEEEtran.bst" 1440712899 57748 7c8250ecf02814ce6ddc0cdbb63df1dd ""
-  "main.aux" 1761663272 6171 ea5d53c84a0ef596442f10e1ad06edc3 "pdflatex"
+  "main.aux" 1761663917 6171 9d166ce075814f49030d5295e93a328e "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1761663269.60694 "main.tex" "main.pdf" "main" 1761663272.98247 0
+["pdflatex"] 1761663914.7619 "main.tex" "main.pdf" "main" 1761663918.20618 0
   "/data/data/com.termux/files/usr/share/texlive/2024/texmf-dist/web2c/texmf.cnf" 1732349492 41853 2b73c63470c7e12c8da3e240c522deac ""
   "/data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -189,17 +189,17 @@
   "decrement-logic/tables/table8.tex" 1761663184 423 cdebf23897ef5a6557813365ae5893d7 ""
   "decrement-logic/tables/table9.tex" 1761663190 295 cd763369a9ee289a929cb114ff664e98 ""
   "digit-editing-logic/main.tex" 1760338081 521 ea8d348683ceb7233bd542bf683c90bb ""
-  "execution/main.tex" 1761663264 1128 473eb4587fb2ded4148c650d38bbdb65 ""
+  "execution/main.tex" 1761663307 1128 473eb4587fb2ded4148c650d38bbdb65 ""
   "figs/Clock_Tinkercad.png" 1760338081 188040 cb23ce05d5cae856824c5f37746cdb10 ""
-  "figs/fig02.tex" 1761661475 1066 4a6b088d5a1517f34dff4e1ec7cff96d ""
+  "figs/fig02.tex" 1761663879 1064 9ad1477fe0d56f990a79dba75b5f3a5e ""
   "figs/fig03.tex" 1761659660 1911 f377026628d97bdec4eb5845e200a599 ""
   "figs/fig05.tex" 1761659409 1604 64179166ef90aeb4cf81e5241502fa62 ""
-  "figs/fig09.tex" 1761659320 2150 c14d465c9e543ce7dcd296892a2ecc90 ""
+  "figs/fig09.tex" 1761663909 2146 eedaa3967199eec1bffc66b32dea7a3e ""
   "future-scope/main.tex" 1760626056 505 0cb7fd34e33759151ed37aa331b5e2b8 ""
-  "increment-logic-and-truth-tables/main.tex" 1761661876 2066 f987ee95ec323ae17b321c852bc1d28b ""
-  "main.aux" 1761663272 6171 ea5d53c84a0ef596442f10e1ad06edc3 "pdflatex"
-  "main.bbl" 1761663269 1971 861cebe1c3cb3d61b63f36cf78caa082 "bibtex main"
-  "main.out" 1761663272 2375 9523c41f178b31eb2841dc330e65deb4 "pdflatex"
+  "increment-logic-and-truth-tables/main.tex" 1761663851 2066 f987ee95ec323ae17b321c852bc1d28b ""
+  "main.aux" 1761663917 6171 9d166ce075814f49030d5295e93a328e "pdflatex"
+  "main.bbl" 1761663914 1971 861cebe1c3cb3d61b63f36cf78caa082 "bibtex main"
+  "main.out" 1761663917 2375 9523c41f178b31eb2841dc330e65deb4 "pdflatex"
   "main.tex" 1761661908 4575 cb4a993dc9bcab187bd5133d0a365903 ""
   "multiplexing/main.tex" 1761557456 320 06f6a5bc4a9b0ef85af370fddfa4b51e ""
   "software-implementation/main.tex" 1760338081 438 1abf864dc9f0f3ee585b3244044edd6e ""

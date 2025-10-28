@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Termux) (preloaded format=pdflatex 2025.4.4)  28 OCT 2025 20:24
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Termux) (preloaded format=pdflatex 2025.4.4)  28 OCT 2025 20:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -960,6 +960,11 @@ label is specified separately. See the documentation for more details. Backward
 \@karnaughmap@local@coordinateonecounter@=\count350
 \@karnaughmap@local@coordinatetwocounter@=\count351
 
+Overfull \hbox (21.27046pt too wide) in paragraph at lines 21--22
+ [][] 
+ []
+
+
 Package karnaugh-map Warning: The API for specifying variable labels have been 
 updated. You are currently using the old API(v1). In the new API each variable 
 label is specified separately. See the documentation for more details. Backward
@@ -969,6 +974,11 @@ label is specified separately. See the documentation for more details. Backward
 \@karnaughmap@local@southeast@=\count353
 \@karnaughmap@local@northwest@=\count354
 \@karnaughmap@local@southeast@=\count355
+
+Overfull \hbox (21.27046pt too wide) in paragraph at lines 40--41
+ [][] 
+ []
+
 
 Package karnaugh-map Warning: The API for specifying variable labels have been 
 updated. You are currently using the old API(v1). In the new API each variable 
@@ -986,6 +996,11 @@ label is specified separately. See the documentation for more details. Backward
 \@karnaughmap@local@coordinateonecounter@=\count364
 \@karnaughmap@local@coordinatetwocounter@=\count365
 
+Overfull \hbox (21.27046pt too wide) in paragraph at lines 59--60
+ [][] 
+ []
+
+
 Package karnaugh-map Warning: The API for specifying variable labels have been 
 updated. You are currently using the old API(v1). In the new API each variable 
 label is specified separately. See the documentation for more details. Backward
@@ -999,6 +1014,11 @@ label is specified separately. See the documentation for more details. Backward
 \@karnaughmap@local@coordinatetwocounter@=\count371
 \@karnaughmap@local@coordinateonecounter@=\count372
 \@karnaughmap@local@coordinatetwocounter@=\count373
+
+Overfull \hbox (21.27046pt too wide) in paragraph at lines 77--78
+ [][] 
+ []
+
 ) (./figs/fig05.tex (./tables/logic/table5.tex)
 
 Package karnaugh-map Warning: The API for specifying variable labels have been 
@@ -1055,8 +1075,17 @@ s/table8.tex) (./decrement-logic/tables/table9.tex) (./decrement-logic/tables/t
 able10.tex) (./decrement-logic/tables/table11.tex))) (./multiplexing/main.tex) 
 (./digit-editing-logic/main.tex
 
-[2]) (./control-implementation/main.tex) (./software-implementation/main.tex) (
-./execution/main.tex
+[2]) (./control-implementation/main.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+) (./software-implementation/main.tex
+Underfull \vbox (badness 1552) has occurred while \output is active []
+
+
+
+[3]) (./execution/main.tex
 Underfull \hbox (badness 10000) in paragraph at lines 8--8
 [][]$\OT1/ptm/m/n/10 https : / / github . com / gadepall / clock / blob / main 
 / codes / code .
@@ -1069,7 +1098,9 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 5--9
 
 
 
-) (./future-scope/main.tex) (./main.bbl)
+) (./future-scope/main.tex
+
+[4]) (./main.bbl)
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -1083,7 +1114,11 @@ Before submitting the final camera ready copy, remember to:
 
 
 
-[3] [4] [5] [6] (./main.aux)
+
+
+[5
+
+] [6] (./main.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
@@ -1094,7 +1129,7 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 Here is how much of TeX's memory you used:
  25529 strings out of 473197
  490443 string characters out of 5701897
- 1048153 words of memory out of 5000000
+ 1061726 words of memory out of 5000000
  48229 multiletter control sequences out of 15000+600000
  595217 words of font info for 106 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1116,7 +1151,7 @@ a/data/com.termux/files/usr/share/texlive/2025/texmf-dist/fonts/type1/urw/times
 s/type1/urw/times/utmbi8a.pfb></data/data/com.termux/files/usr/share/texlive/20
 25/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></data/data/com.termux/files/usr
 /share/texlive/2025/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (6 pages, 299781 bytes).
+Output written on main.pdf (6 pages, 300038 bytes).
 PDF statistics:
  281 PDF objects out of 1000 (max. 8388607)
  242 compressed objects within 3 object streams
