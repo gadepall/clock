@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Termux) (preloaded format=pdflatex 2025.4.4)  28 OCT 2025 20:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Termux) (preloaded format=pdflatex 2025.4.4)  28 OCT 2025 20:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -915,7 +915,7 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 1.
 ts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ))
-<figs/Clock_Tinkercad.png, id=106, 780.9175pt x 494.84875pt>
+<figs/Clock_Tinkercad.png, id=82, 780.9175pt x 494.84875pt>
 File: figs/Clock_Tinkercad.png Graphic file (type png)
 <use figs/Clock_Tinkercad.png>
 Package pdftex.def Info: figs/Clock_Tinkercad.png  used on input line 54.
@@ -1050,139 +1050,13 @@ label is specified separately. See the documentation for more details. Backward
 \@karnaughmap@local@southeast@=\count399
 \@karnaughmap@local@northwest@=\count400
 \@karnaughmap@local@southeast@=\count401
-)) (./decrement-logic/main.tex (./decrement-logic/tables/table8.tex)
+)) (./decrement-logic/main.tex (./tables/decrement.tex (./decrement-logic/table
+s/table8.tex) (./decrement-logic/tables/table9.tex) (./decrement-logic/tables/t
+able10.tex) (./decrement-logic/tables/table11.tex))) (./multiplexing/main.tex) 
+(./digit-editing-logic/main.tex
 
-Package karnaugh-map Warning: The API for specifying variable labels have been 
-updated. You are currently using the old API(v1). In the new API each variable 
-label is specified separately. See the documentation for more details. Backward
- compatibility may disappear in a future release. on input line 7.
-
-\@karnaughmap@local@testcaseone@=\count402
-\@karnaughmap@local@testcasetwo@=\count403
-\@karnaughmap@local@coordinateonecounter@=\count404
-\@karnaughmap@local@coordinatetwocounter@=\count405
-\@karnaughmap@local@coordinateonecounter@=\count406
-\@karnaughmap@local@coordinatetwocounter@=\count407
-
-Package karnaugh-map Warning: The API for specifying variable labels have been 
-updated. You are currently using the old API(v1). In the new API each variable 
-label is specified separately. See the documentation for more details. Backward
- compatibility may disappear in a future release. on input line 22.
-
-\@karnaughmap@local@northwest@=\count408
-\@karnaughmap@local@southeast@=\count409
-\@karnaughmap@local@northwest@=\count410
-\@karnaughmap@local@southeast@=\count411
-\@karnaughmap@local@northwest@=\count412
-\@karnaughmap@local@southeast@=\count413
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[2]
-
-Package karnaugh-map Warning: The API for specifying variable labels have been 
-updated. You are currently using the old API(v1). In the new API each variable 
-label is specified separately. See the documentation for more details. Backward
- compatibility may disappear in a future release. on input line 40.
-
-\@karnaughmap@local@northwest@=\count414
-\@karnaughmap@local@southeast@=\count415
-\@karnaughmap@local@northwest@=\count416
-\@karnaughmap@local@southeast@=\count417
-\@karnaughmap@local@northwest@=\count418
-\@karnaughmap@local@southeast@=\count419
-
-Package karnaugh-map Warning: The API for specifying variable labels have been 
-updated. You are currently using the old API(v1). In the new API each variable 
-label is specified separately. See the documentation for more details. Backward
- compatibility may disappear in a future release. on input line 57.
-
-\@karnaughmap@local@northwest@=\count420
-\@karnaughmap@local@southeast@=\count421
-\@karnaughmap@local@northwest@=\count422
-\@karnaughmap@local@southeast@=\count423
-(./decrement-logic/tables/table9.tex
-Underfull \vbox (badness 4832) has occurred while \output is active []
-
-
-
-)
-
-Package karnaugh-map Warning: The API for specifying variable labels have been 
-updated. You are currently using the old API(v1). In the new API each variable 
-label is specified separately. See the documentation for more details. Backward
- compatibility may disappear in a future release. on input line 76.
-
-\@karnaughmap@local@testcaseone@=\count424
-\@karnaughmap@local@testcasetwo@=\count425
-\@karnaughmap@local@coordinateonecounter@=\count426
-\@karnaughmap@local@coordinatetwocounter@=\count427
-\@karnaughmap@local@coordinateonecounter@=\count428
-\@karnaughmap@local@coordinatetwocounter@=\count429
-
-Package karnaugh-map Warning: The API for specifying variable labels have been 
-updated. You are currently using the old API(v1). In the new API each variable 
-label is specified separately. See the documentation for more details. Backward
- compatibility may disappear in a future release. on input line 91.
-
-\@karnaughmap@local@testcaseone@=\count430
-\@karnaughmap@local@testcasetwo@=\count431
-\@karnaughmap@local@coordinateonecounter@=\count432
-\@karnaughmap@local@coordinatetwocounter@=\count433
-\@karnaughmap@local@coordinateonecounter@=\count434
-\@karnaughmap@local@coordinatetwocounter@=\count435
-\@karnaughmap@local@northwest@=\count436
-\@karnaughmap@local@southeast@=\count437
-
-Package karnaugh-map Warning: The API for specifying variable labels have been 
-updated. You are currently using the old API(v1). In the new API each variable 
-label is specified separately. See the documentation for more details. Backward
- compatibility may disappear in a future release. on input line 108.
-
-\@karnaughmap@local@testcaseone@=\count438
-\@karnaughmap@local@testcasetwo@=\count439
-\@karnaughmap@local@coordinateonecounter@=\count440
-\@karnaughmap@local@coordinatetwocounter@=\count441
-\@karnaughmap@local@coordinateonecounter@=\count442
-\@karnaughmap@local@coordinatetwocounter@=\count443
-\@karnaughmap@local@northwest@=\count444
-\@karnaughmap@local@southeast@=\count445
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[3]
-LaTeX Info: Symbol \textrightarrow not provided by
-            font family ptm in TS1 encoding.
-            Default family used instead on input line 135.
-LaTeX Info: Symbol \textrightarrow not provided by
-            font family ptm in TS1 encoding.
-            Default family used instead on input line 138.
-(./decrement-logic/tables/table10.tex)
-\@karnaughmap@local@northwest@=\count446
-\@karnaughmap@local@southeast@=\count447
-\@karnaughmap@local@northwest@=\count448
-\@karnaughmap@local@southeast@=\count449
-\@karnaughmap@local@northwest@=\count450
-\@karnaughmap@local@southeast@=\count451
-
-Underfull \vbox (badness 1052) has occurred while \output is active []
-
-
-
-(./decrement-logic/tables/table11.tex)
-\@karnaughmap@local@northwest@=\count452
-\@karnaughmap@local@southeast@=\count453
-\@karnaughmap@local@northwest@=\count454
-\@karnaughmap@local@southeast@=\count455
-) (./multiplexing/main.tex) (./digit-editing-logic/main.tex
-
-[4{/data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/fonts/enc/dvip
-s/cm-super/cm-super-ts1.enc}]) (./control-implementation/main.tex) (./software-
-implementation/main.tex) (./execution/main.tex
+[2]) (./control-implementation/main.tex) (./software-implementation/main.tex) (
+./execution/main.tex
 Underfull \hbox (badness 10000) in paragraph at lines 8--8
 [][]$\OT1/ptm/m/n/10 https : / / github . com / gadepall / clock / blob / main 
 / codes / code .
@@ -1191,16 +1065,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 8--8
 
 Overfull \hbox (6.79999pt too wide) in paragraph at lines 5--9
 []  
- []
-
-<figs/clock.jpg, id=178, 2782.395pt x 2304.61pt>
-File: figs/clock.jpg Graphic file (type jpg)
-<use figs/clock.jpg>
-Package pdftex.def Info: figs/clock.jpg  used on input line 24.
-(pdftex.def)             Requested size: 258.0pt x 213.6654pt.
-
-Overfull \hbox (6.0pt too wide) in paragraph at lines 24--25
- [][] 
  []
 
 
@@ -1219,27 +1083,20 @@ Before submitting the final camera ready copy, remember to:
 
 
 
-[5] [6] [7] [8]
-
-
-
-[9
-
-
- <./figs/clock.jpg>] (./main.aux)
+[3] [4] [5] [6] (./main.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 778AFE4D1B85554F59A659803408F15F;3284.
+(rerunfilecheck)             Checksum: 9523C41F178B31EB2841DC330E65DEB4;2375.
  ) 
 Here is how much of TeX's memory you used:
- 26446 strings out of 473197
- 514432 string characters out of 5701897
- 1164364 words of memory out of 5000000
- 49152 multiletter control sequences out of 15000+600000
- 596975 words of font info for 109 fonts, out of 8000000 for 9000
+ 25529 strings out of 473197
+ 490443 string characters out of 5701897
+ 1048153 words of memory out of 5000000
+ 48229 multiletter control sequences out of 15000+600000
+ 595217 words of font info for 106 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,19n,105p,784b,1320s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/fonts/type1/pu
@@ -1254,17 +1111,15 @@ data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/fonts/type1/public
 /amsfonts/cm/cmsy10.pfb></data/data/com.termux/files/usr/share/texlive/2025/tex
 mf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></data/data/com.termux/files/u
 sr/share/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></dat
-a/data/com.termux/files/usr/share/texlive/2025/texmf-dist/fonts/type1/public/cm
--super/sfrb1000.pfb></data/data/com.termux/files/usr/share/texlive/2025/texmf-d
-ist/fonts/type1/urw/times/utmb8a.pfb></data/data/com.termux/files/usr/share/tex
-live/2025/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></data/data/com.termux/f
-iles/usr/share/texlive/2025/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></data/
-data/com.termux/files/usr/share/texlive/2025/texmf-dist/fonts/type1/urw/times/u
-tmri8a.pfb>
-Output written on main.pdf (9 pages, 1914978 bytes).
+a/data/com.termux/files/usr/share/texlive/2025/texmf-dist/fonts/type1/urw/times
+/utmb8a.pfb></data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/font
+s/type1/urw/times/utmbi8a.pfb></data/data/com.termux/files/usr/share/texlive/20
+25/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></data/data/com.termux/files/usr
+/share/texlive/2025/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on main.pdf (6 pages, 299781 bytes).
 PDF statistics:
- 308 PDF objects out of 1000 (max. 8388607)
- 263 compressed objects within 3 object streams
- 86 named destinations out of 1000 (max. 500000)
- 199 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 281 PDF objects out of 1000 (max. 8388607)
+ 242 compressed objects within 3 object streams
+ 93 named destinations out of 1000 (max. 500000)
+ 146 words of extra memory for PDF output out of 10000 (max. 10000000)
 

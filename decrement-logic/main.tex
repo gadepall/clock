@@ -1,8 +1,37 @@
 \section{Decrement Logic}
 This logic is primarly used to decrease the count on a particular display using button 4.  This is helpful in setting the time for the clock.
+The relevant truth tables are available in 
+Table \ref{tab:decrement}
+\input{tables/decrement.tex}
+\begin{align}
+    A &= W_1' \\
+    B &= (X_1' W_1' ((Z_1' Y_1) + (Z_1 Y_1'))) + (Z_1' W_1 X_1) \\
+    C &= (Z_1' Y_1 (X_1 + W_1)) + (Z_1 X_1' W_1' Y_1') \\
+    D &= X_1' Y_1' ((Z_1 W_1) + (Z_1' W_1')) 
+\end{align}
 
+\begin{align}
+    A &= W_2' \\
+    B &= (Y_2 X_2' W_2') + (Y_2' X_2 W_2) \\
+    C &= X_2' ((Y_2 W_2) + (Y_2' W_2')) \\
+    D &= 0 
+\end{align}
+\begin{align}
+    A &= W_5' \\
+    B &= (X_5 W_5) + (X_5' W_5') \\
+    C &= 0 \\
+    D &= 0 
+\end{align}
+\begin{align}
+    A &= X_6 W_6' \\
+    B &= X_6' W_6' \\
+    C &= 0 \\
+    D &= 0 
+\end{align}
+
+
+\iffalse
 \subsection{Seconds Ones (0-9)}
-\input{decrement-logic/tables/table8.tex}
 
 \begin{karnaugh-map}[4][4][1][][]
     \minterms{0,2,4,6,8}
@@ -15,9 +44,6 @@ This logic is primarly used to decrease the count on a particular display using 
         node [pos=0.7, below left, anchor=north east] {$ZY$} 
         ++(135:1);
 \end{karnaugh-map}
-\begin{align}
-    A &= W_1' \notag
-\end{align}
 
 \begin{karnaugh-map}[4][4][1][][]
     \minterms{3,4,7,8}
@@ -33,9 +59,6 @@ This logic is primarly used to decrease the count on a particular display using 
         node [pos=0.7, below left, anchor=north east] {$ZY$} 
         ++(135:1);
 \end{karnaugh-map}
-\begin{align}
-    B &= (X_1' W_1' ((Z_1' Y_1) + (Z_1 Y_1'))) + (Z_1' W_1 X_1) \notag
-\end{align}
 
 \begin{karnaugh-map}[4][4][1][][]
     \minterms{5,6,7,8}
@@ -50,9 +73,6 @@ This logic is primarly used to decrease the count on a particular display using 
         node [pos=0.7, below left, anchor=north east] {$ZY$} 
         ++(135:1);
 \end{karnaugh-map}
-\begin{align}
-    C &= (Z_1' Y_1 (X_1 + W_1)) + (Z_1 X_1' W_1' Y_1') \notag
-\end{align}
 
 \begin{karnaugh-map}[4][4][1][][]
     \minterms{0,9}
@@ -66,12 +86,7 @@ This logic is primarly used to decrease the count on a particular display using 
         node [pos=0.7, below left, anchor=north east] {$ZY$} 
         ++(135:1);
 \end{karnaugh-map}
-\begin{align}
-    D &= X_1' Y_1' ((Z_1 W_1) + (Z_1' W_1')) \notag
-\end{align}
-
 \subsection{Seconds Tens (0-5)}
-\input{decrement-logic/tables/table9.tex}
 
 \begin{karnaugh-map}[4][4][1][][]
     \minterms{0,2,4}
@@ -84,9 +99,6 @@ This logic is primarly used to decrease the count on a particular display using 
         node [pos=0.7, below left, anchor=north east] {$ZY$} 
         ++(135:1);
 \end{karnaugh-map}
-\begin{align}
-    A &= W_2' \notag
-\end{align}
 
 \begin{karnaugh-map}[4][4][1][][]
     \minterms{3,4}
@@ -101,9 +113,6 @@ This logic is primarly used to decrease the count on a particular display using 
         node [pos=0.7, below left, anchor=north east] {$ZY$} 
         ++(135:1);
 \end{karnaugh-map}
-\begin{align}
-    B &= (Y_2 X_2' W_2') + (Y_2' X_2 W_2) \notag
-\end{align}
 
 \begin{karnaugh-map}[4][4][1][][]
     \minterms{0,5}
@@ -118,13 +127,6 @@ This logic is primarly used to decrease the count on a particular display using 
         node [pos=0.7, below left, anchor=north east] {$ZY$} 
         ++(135:1);
 \end{karnaugh-map}
-\begin{align}
-    C &= X_2' ((Y_2 W_2) + (Y_2' W_2')) \notag
-\end{align}
-
-\begin{align}
-    D &= 0 \notag
-\end{align}
 
 \subsection{Minutes Ones (0-9)}
 \textit{Same as Seconds Ones with W3/X3/Y3/Z3.}
@@ -137,7 +139,6 @@ This logic is primarly used to decrease the count on a particular display using 
 \textit{Same as Seconds Ones with W5/X5/Y5/Z5.}
 
 \textbf{II. Tens = 2 → 0-3 }
-\input{decrement-logic/tables/table10.tex}
 
 \begin{karnaugh-map}[2][2][1][][]
     \minterms{0,2}
@@ -149,9 +150,6 @@ This logic is primarly used to decrease the count on a particular display using 
         node [pos=0.7, below left, anchor=north east] {$X$} 
         ++(135:1);
 \end{karnaugh-map}
-\begin{align}
-    A &= W_5' \notag
-\end{align}
 
 \begin{karnaugh-map}[2][2][1][][]
     \minterms{0,3}
@@ -165,17 +163,8 @@ This logic is primarly used to decrease the count on a particular display using 
         node [pos=0.7, below left, anchor=north east] {$X$} 
         ++(135:1);
 \end{karnaugh-map}
-\begin{align}
-    B &= (X_5 W_5) + (X_5' W_5') \notag
-\end{align}
-
-\begin{align}
-    C &= 0 \notag\\
-    D &= 0 \notag
-\end{align}
 
 \subsection{Hours Tens (0-2)}
-\input{decrement-logic/tables/table11.tex}
 
 \begin{karnaugh-map}[2][2][1][][]
     \minterms{2}
@@ -188,9 +177,6 @@ This logic is primarly used to decrease the count on a particular display using 
         node [pos=0.7, below left, anchor=north east] {$X$} 
         ++(135:1);
 \end{karnaugh-map}
-\begin{align}
-    A &= X_6 W_6' \notag
-\end{align}
 
 \begin{karnaugh-map}[2][2][1][][]
     \minterms{0}
@@ -203,14 +189,7 @@ This logic is primarly used to decrease the count on a particular display using 
         node [pos=0.7, below left, anchor=north east] {$X$} 
         ++(135:1);
 \end{karnaugh-map}
-\begin{align}
-    B &= X_6' W_6' \notag
-\end{align}
-
-\begin{align}
-    C &= 0 \notag\\
-    D &= 0 \notag
-\end{align}
+\fi
 
 
 
