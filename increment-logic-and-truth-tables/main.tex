@@ -165,8 +165,19 @@ Figs. \ref{fig:kmapA-3-5}-\ref{fig:kmapC-3-5} yielding the following logic equat
 \label{fig:kmapC-3-5}
 \end{figure}
 \subsection{Display 2 (Display1 = 2)}
+The truth table is available in 
+Table 
+\ref{tab:6}
+and the corresponding K-maps using dont cares for the output variables are given in 
+Figs. \ref{fig:kmapA-2}-\ref{fig:kmapB-2} yielding the following logic equations.
+\begin{table}[!h]
+\centering
 \input{tables/logic/table6.tex}
-
+\caption{}
+\label{tab:6}
+\end{table}
+\begin{figure}
+	\centering
 \begin{karnaugh-map}[2][2][1][][]
     \minterms{0,2}
     \maxterms{3,1}
@@ -177,31 +188,32 @@ Figs. \ref{fig:kmapA-3-5}-\ref{fig:kmapC-3-5} yielding the following logic equat
         node [pos=0.7, below left, anchor=north east] {$X$} 
         ++(135:1);
 \end{karnaugh-map}
-\begin{align}
-    A &= W_5' \notag
-\end{align}
+\caption{A}
+\label{fig:kmapA-2}
+\end{figure}
 
+\begin{figure}
+	\centering
 \begin{karnaugh-map}[2][2][1][][]
     \minterms{1,2}
     \maxterms{3,0}
-
     \implicant{1}{1}
     \implicant{2}{2}
-
     \draw[color=black, ultra thin] (0, 2) --
         node [pos=0.7, above right, anchor=south west] {$W$}
         node [pos=0.7, below left, anchor=north east] {$X$} 
         ++(135:1);
 \end{karnaugh-map}
+\caption{B}
+\label{fig:kmapB-2}
+\end{figure}
 \begin{align}
-    B &= (W_5 X_5') + (W_5' X_5) \notag
+    A &= W_5' \\
+    B &= (W_5 X_5') + (W_5' X_5) \\
+    C &= 0 \\
+    D &= 0 
 \end{align}
-
-\begin{align}
-    C &= 0 \notag\\
-    D &= 0 \notag
-\end{align}
-
+%
 \subsection{Hours Tens (0-2)}
 \input{tables/logic/table7.tex}
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Termux) (preloaded format=pdflatex 2025.4.4)  27 OCT 2025 21:20
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Termux) (preloaded format=pdflatex 2025.4.4)  28 OCT 2025 15:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -997,20 +997,20 @@ label is specified separately. See the documentation for more details. Backward
 \@karnaughmap@local@southeast@=\count385
 \@karnaughmap@local@northwest@=\count386
 \@karnaughmap@local@southeast@=\count387
-(./tables/logic/table6.tex
+(./tables/logic/table6.tex)
+\@karnaughmap@local@northwest@=\count388
+\@karnaughmap@local@southeast@=\count389
+
 
 [2]
 
-)
-\@karnaughmap@local@northwest@=\count388
-\@karnaughmap@local@southeast@=\count389
 \@karnaughmap@local@northwest@=\count390
 \@karnaughmap@local@southeast@=\count391
 \@karnaughmap@local@northwest@=\count392
 \@karnaughmap@local@southeast@=\count393
-(./tables/logic/table7.tex
 
-[3])
+
+[3] (./tables/logic/table7.tex)
 \@karnaughmap@local@northwest@=\count394
 \@karnaughmap@local@southeast@=\count395
 \@karnaughmap@local@northwest@=\count396
@@ -1028,9 +1028,6 @@ label is specified separately. See the documentation for more details. Backward
 \@karnaughmap@local@coordinatetwocounter@=\count401
 \@karnaughmap@local@coordinateonecounter@=\count402
 \@karnaughmap@local@coordinatetwocounter@=\count403
-
-Underfull \vbox (badness 1953) has occurred while \output is active []
-
 
 
 
@@ -1157,7 +1154,7 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 5--9
 
 
 [6]
-<figs/clock.jpg, id=199, 2782.395pt x 2304.61pt>
+<figs/clock.jpg, id=209, 2782.395pt x 2304.61pt>
 File: figs/clock.jpg Graphic file (type jpg)
 <use figs/clock.jpg>
 Package pdftex.def Info: figs/clock.jpg  used on input line 24.
@@ -1194,13 +1191,13 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 153F238A8A0A6BAC324B1E942975A98E;3327.
  ) 
 Here is how much of TeX's memory you used:
- 24966 strings out of 473197
- 485537 string characters out of 5701897
- 991171 words of memory out of 5000000
- 47699 multiletter control sequences out of 15000+600000
+ 24976 strings out of 473197
+ 485639 string characters out of 5701897
+ 999155 words of memory out of 5000000
+ 47702 multiletter control sequences out of 15000+600000
  597621 words of font info for 110 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,17n,105p,784b,1112s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,17n,105p,784b,1114s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/fonts/type1/pu
 blic/amsfonts/cmextra/cmex8.pfb></data/data/com.termux/files/usr/share/texlive/
 2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></data/data/com.termu
@@ -1220,10 +1217,10 @@ live/2025/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></data/data/com.termux/f
 iles/usr/share/texlive/2025/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></data/
 data/com.termux/files/usr/share/texlive/2025/texmf-dist/fonts/type1/urw/times/u
 tmri8a.pfb>
-Output written on main.pdf (7 pages, 1914133 bytes).
+Output written on main.pdf (7 pages, 1914741 bytes).
 PDF statistics:
- 298 PDF objects out of 1000 (max. 8388607)
- 255 compressed objects within 3 object streams
- 81 named destinations out of 1000 (max. 500000)
+ 309 PDF objects out of 1000 (max. 8388607)
+ 266 compressed objects within 3 object streams
+ 88 named destinations out of 1000 (max. 500000)
  199 words of extra memory for PDF output out of 10000 (max. 10000000)
 
