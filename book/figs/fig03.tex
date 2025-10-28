@@ -1,0 +1,72 @@
+\begin{figure*}[t]
+	\centering
+	%\begin{table}[!h]
+%\centering
+\input{tables/logic/table6.tex}
+%\caption{Counting 0-3}
+%\captionof{table}{Counting 0-3}
+%\label{tab:6}
+%\end{table}
+%	\begin{subfigure}[b]{0.45\textwidth}
+%	\centering
+%\begin{karnaugh-map}[2][2][1][][]
+%    \minterms{0}
+%    \maxterms{2,1}
+%    \indeterminants{3}
+%    \implicant{0}{0}
+%    \draw[color=black, ultra thin] (0, 2) --
+%        node [pos=0.7, above right, anchor=south west] {$W$}
+%        node [pos=0.7, below left, anchor=north east] {$X$} 
+%        ++(135:1);
+%\end{karnaugh-map}
+%\caption{A}
+%\label{fig:kmapA-2}
+%\end{subfigure}
+%	\begin{subfigure}[b]{0.45\textwidth}
+%	\centering
+%\begin{karnaugh-map}[2][2][1][][]
+%    \minterms{0}
+%    \maxterms{2,1}
+%    \indeterminants{3}
+%    \implicant{0}{0}
+%    \draw[color=black, ultra thin] (0, 2) --
+%        node [pos=0.7, above right, anchor=south west] {$W$}
+%        node [pos=0.7, below left, anchor=north east] {$X$} 
+%        ++(135:1);
+%\end{karnaugh-map}
+%\caption{A}
+%\label{fig:kmapA-2}
+%\end{subfigure}
+ \begin{subfigure}[b]{0.45\textwidth}
+	\centering
+\begin{karnaugh-map}[2][2][1][][]
+    \minterms{0,2}
+    \maxterms{3,1}
+
+    \implicant{0}{2}
+    \draw[color=black, ultra thin] (0, 2) --
+        node [pos=0.7, above right, anchor=south west] {$W$}
+        node [pos=0.7, below left, anchor=north east] {$X$} 
+        ++(135:1);
+\end{karnaugh-map}
+\caption{A}
+\label{fig:kmapA-2}
+\end{subfigure}
+ \begin{subfigure}[b]{0.45\textwidth}
+	\centering
+\begin{karnaugh-map}[2][2][1][][]
+    \minterms{1,2}
+    \maxterms{3,0}
+    \implicant{1}{1}
+    \implicant{2}{2}
+    \draw[color=black, ultra thin] (0, 2) --
+        node [pos=0.7, above right, anchor=south west] {$W$}
+        node [pos=0.7, below left, anchor=north east] {$X$} 
+        ++(135:1);
+\end{karnaugh-map}
+\caption{B}
+\label{fig:kmapB-2}
+\end{subfigure}
+\caption{Counting 0-3}
+\label{fig:0-3}
+\end{figure*}

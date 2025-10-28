@@ -1,0 +1,62 @@
+\begin{figure*}
+	\centering
+%\begin{table}[!h]
+%\centering
+\input{tables/logic/table5.tex}
+%\caption{Counting 0-5}
+%\label{tab:5}
+%\end{table}
+\begin{subfigure}[b]{0.45\textwidth}
+\begin{karnaugh-map}[4][4][1][][]
+    \maxterms{1,3,5}
+    \minterms{0,2,4}
+    \indeterminants{6,7,8,9,10,11,12,13,14,15}
+
+    \implicantedge{0}{8}{2}{10}
+    \draw[color=black, ultra thin] (0, 4) --
+        node [pos=0.7, above right, anchor=south west] {$XW$}
+        node [pos=0.7, below left, anchor=north east] {$ZY$} 
+        ++(135:1);
+\end{karnaugh-map}
+\caption{A}
+\label{fig:kmapA-3-5}
+\end{subfigure}
+\begin{subfigure}[b]{0.45\textwidth}
+	\centering
+\begin{karnaugh-map}[4][4][1][][]
+    \maxterms{0,4,3,5}
+    \minterms{1,2}
+    \indeterminants{6,7,8,9,10,11,12,13,14,15}
+
+    \implicant{2}{10}
+    \implicantedge{1}{1}{9}{9}
+
+    \draw[color=black, ultra thin] (0, 4) --
+        node [pos=0.7, above right, anchor=south west] {$XW$}
+        node [pos=0.7, below left, anchor=north east] {$ZY$} 
+        ++(135:1);
+\end{karnaugh-map}
+\caption{B}
+\label{fig:kmapB-3-5}
+\end{subfigure}
+\begin{subfigure}[b]{0.45\textwidth}
+	\centering
+\begin{karnaugh-map}[4][4][1][][]
+    \maxterms{0,1,2,5}
+    \minterms{3,4}
+    \indeterminants{6,7,8,9,10,11,12,13,14,15}
+
+    \implicant{4}{8}
+    \implicant{3}{11}
+
+    \draw[color=black, ultra thin] (0, 4) --
+        node [pos=0.7, above right, anchor=south west] {$XW$}
+        node [pos=0.7, below left, anchor=north east] {$ZY$} 
+        ++(135:1);
+\end{karnaugh-map}
+\caption{C}
+\label{fig:kmapC-3-5}
+\end{subfigure}
+\caption{Counting 0-5}
+\label{fig:0-5}
+\end{figure*}

@@ -1,0 +1,746 @@
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{setspace}
+\usepackage{gensymb}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{bm}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{array}
+\usepackage{calc}
+\usepackage{hhline}
+\usepackage{ifthen}
+\usepackage{textcomp}
+\usepackage{karnaugh-map}
+
+\singlespacing
+\usetheme{CambridgeUS}
+
+% Robust listings configuration
+\lstset{
+    basicstyle=\ttfamily\footnotesize,
+    breaklines=true,
+    postbreak={\mbox{\textcolor{red}{\tiny$\hookrightarrow$}\space}},
+    columns=fullflexible,
+    keepspaces=true,
+    showstringspaces=false,
+    upquote=true,
+    literate={~}{{\textasciitilde}}1
+}
+
+\title[Digital Clock Implementation]{Digital Clock Implementation using Arduino with Multiplexing and Editing Features}
+\author{Dhawal}
+\institute[]{Department of Electrical Engineering\\Indian Institute of Technology Hyderabad\\Email: ee24btech11015@iith.ac.in}
+\date{}
+
+\begin{document}
+
+\begin{frame}
+    \titlepage
+\centering
+Electrical Engineering Department\\
+Indian Institute of Technology, Hyderabad
+\end{frame}
+
+\begin{frame}{Outline}
+    \tableofcontents
+\end{frame}
+
+\section{Introduction}
+\begin{frame}{Introduction}
+\begin{itemize}
+    \item Digital clock system with editing features using Arduino
+    \item Multiplexing six 7-segment displays using minimal I/O pins
+    \item Pause/play functionality and digit-by-digit editing
+    \item Boolean logic for increment/decrement and constraints for each digit
+\end{itemize}
+\end{frame}
+
+\section{Components}
+\begin{frame}{Components List}
+\centering
+\begin{tabular}{|l|c|c|}
+\hline
+Component & Value & Quantity\\
+\hline
+Arduino Uno & & 1\\
+USB Cable & Type B & 1\\
+Seven Segment Display & Common Cathode & 6\\
+Push Buttons & & 4\\
+IC 7447 & & 1\\
+Jumper Wires & M-M & 16\\
+Breadboard & & 1\\
+Resistors & 220$\Omega$ & 7\\
+Resistors & 10$k\Omega$ & 4\\
+\hline
+\end{tabular}
+\end{frame}
+
+\section{Circuit Connections}
+\begin{frame}{Arduino Pin Connections}
+\centering
+\begin{tabular}{|c|c|c|}
+\hline
+Item & Arduino Pin & Function\\
+\hline
+Button 1 & D10 & Edit Mode Toggle\\
+Button 2 & D11 & Next Digit Selection\\
+Button 3 & D12 & Increment Digit\\
+Button 4 & D13 & Decrement Digit\\
+IC 7447 Pin 7 & D0 & BCD Bit 0 (A)\\
+IC 7447 Pin 1 & D1 & BCD Bit 1 (B)\\
+IC 7447 Pin 2 & D2 & BCD Bit 2 (C)\\
+IC 7447 Pin 6 & D3 & BCD Bit 3 (D)\\
+Display 1 & D4 & Hours Tens Digit\\
+Display 2 & D5 & Hours Units Digit\\
+Display 3 & D6 & Minutes Tens Digit\\
+Display 4 & D7 & Minutes Units Digit\\
+Display 5 & D8 & Seconds Tens Digit\\
+Display 6 & D9 & Seconds Units Digit\\
+\hline
+\end{tabular}
+\end{frame}
+
+\section{Multiplexing Technique}
+\begin{frame}{Multiplexing}
+\begin{itemize}
+    \item All BCD inputs shared among six 7-segment displays
+    \item Arduino controls enable pins D4-D9
+    \item Each digit displayed for 1ms → appears continuous
+    \item Saves I/O pins, enables six-digit display
+\end{itemize}
+\end{frame}
+
+\section{Digit Editing Logic}
+\begin{frame}{Editing System}
+\begin{enumerate}
+    \item PAUSE button toggles run/edit mode
+    \item NEXT button selects which digit to edit
+    \item INC button increments selected digit (rollover constraints)
+    \item DEC button decrements selected digit (rollunder constraints)
+    \item Selected digit blinks every 500ms
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Digit Constraints}
+\begin{itemize}
+    \item Seconds/Minutes Ones: 0–9
+    \item Seconds/Minutes Tens: 0–5
+    \item Hours Ones: 0–9 (if tens = 0/1), 0–3 (if tens = 2)
+    \item Hours Tens: 0–2
+\end{itemize}
+\end{frame}
+
+\section{Increment Logic and Truth Tables}
+
+\begin{frame}{Seconds / Minutes / Hours (Tens= 0/1) Ones (0-9)}
+\centering
+\begin{tabular}{|c|c|c|c||c|c|c|c|}
+\hline
+Z & Y & X & W & D & C & B & A\\
+\hline
+0&0&0&0&0&0&0&1\\
+0&0&0&1&0&0&1&0\\
+0&0&1&0&0&0&1&1\\
+0&0&1&1&0&1&0&0\\
+0&1&0&0&0&1&0&1\\
+0&1&0&1&0&1&1&0\\
+0&1&1&0&0&1&1&1\\
+0&1&1&1&1&0&0&0\\
+1&0&0&0&1&0&0&1\\
+1&0&0&1&0&0&0&0\\
+\hline
+\end{tabular}
+
+\end{frame}
+
+
+\begin{frame}{ K-maps}
+\begin{columns}
+\begin{column}{0.5\textwidth}
+\begin{karnaugh-map}[4][4][1][][]
+    \maxterms{1,3,5,7,9}
+    \minterms{0,2,4,6,8}
+    \indeterminants{10,11,12,13,14,15}
+    \implicantedge{0}{8}{2}{10}
+    \draw[color=black, ultra thin] (0,4) --
+        node [pos=0.7, above right, anchor=south west] {$XW$}
+        node [pos=0.7, below left, anchor=north east] {$ZY$} ++(135:1);
+\end{karnaugh-map}
+\begin{align}
+A &= W_1' \notag
+\end{align}
+\end{column}
+
+\begin{column}{0.5\textwidth}
+\begin{karnaugh-map}[4][4][1][][]
+    \minterms{1,2,5,6}
+    \maxterms{0,3,4,7,8,9}
+    \indeterminants{10,11,12,13,14,15}
+    \implicant{1}{5}
+    \implicant{2}{10}
+    \draw[color=black, ultra thin] (0,4) --
+        node [pos=0.7, above right, anchor=south west] {$XW$}
+        node [pos=0.7, below left, anchor=north east] {$ZY$} ++(135:1);
+\end{karnaugh-map}
+\begin{align}
+B &= (W_1 X_1' Z_1') + (W_1' X_1) \notag
+\end{align}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{K-maps }
+\begin{columns}
+\begin{column}{0.5\textwidth}
+\begin{karnaugh-map}[4][4][1][][]
+    \minterms{3,4,5,6}
+    \maxterms{0,1,2,7,8,9}
+    \indeterminants{10,11,12,13,14,15}
+    \implicant{4}{5}    
+    \implicant{3}{3}
+    \implicantedge{4}{4}{6}{6}   
+    \draw[color=black, ultra thin] (0,4) --
+        node [pos=0.7, above right, anchor=south west] {$XW$}
+        node [pos=0.7, below left, anchor=north east] {$ZY$} ++(135:1);
+\end{karnaugh-map}
+\begin{align}
+C &= (X_1' Y_1) + (W_1' Y_1) + (W_1 X_1 Y_1') \notag
+\end{align}
+\end{column}
+
+\begin{column}{0.5\textwidth}
+\begin{karnaugh-map}[4][4][1][][]
+    \minterms{7,8}
+    \maxterms{0,1,2,3,4,6,5,9}
+    \indeterminants{10,11,12,13,14,15}
+    \implicant{7}{15}    
+    \implicantedge{12}{8}{14}{10}   
+    \draw[color=black, ultra thin] (0,4) --
+        node [pos=0.7, above right, anchor=south west] {$XW$}
+        node [pos=0.7, below left, anchor=north east] {$ZY$} ++(135:1);
+\end{karnaugh-map}
+\begin{align}
+D &= (W_1' Z_1) + (W_1 X_1 Y_1) \notag
+\end{align}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Seconds / Minutes Tens (0-5)}
+\centering
+\begin{tabular}{|c|c|c|c||c|c|c|c|}
+\hline
+Z & Y & X & W & D & C & B & A\\
+\hline
+0&0&0&0&0&0&0&1\\
+0&0&0&1&0&0&1&0\\
+0&0&1&0&0&0&1&1\\
+0&0&1&1&0&1&0&0\\
+0&1&0&0&0&1&0&1\\
+0&1&0&1&0&0&0&0\\
+\hline
+\end{tabular}
+\end{frame}
+
+
+\begin{frame}{ K-maps}
+\begin{columns}
+\begin{column}{0.5\textwidth}
+\begin{karnaugh-map}[4][4][1][][]
+    \maxterms{1,3,5}
+    \minterms{0,2,4}
+    \indeterminants{6,7,8,9,10,11,12,13,14,15}
+    \implicantedge{0}{8}{2}{10}
+    \draw[color=black, ultra thin] (0,4) --
+        node [pos=0.7, above right, anchor=south west] {$XW$}
+        node [pos=0.7, below left, anchor=north east] {$ZY$} ++(135:1);
+\end{karnaugh-map}
+\begin{align}
+A &= W_2' \notag
+\end{align}
+\end{column}
+
+\begin{column}{0.5\textwidth}
+\begin{karnaugh-map}[4][4][1][][]
+    \maxterms{0,4,3,5}
+    \minterms{1,2}
+    \indeterminants{6,7,8,9,10,11,12,13,14,15}
+    \implicant{2}{10}
+    \implicantedge{1}{1}{9}{9}
+    \draw[color=black, ultra thin] (0,4) --
+        node [pos=0.7, above right, anchor=south west] {$XW$}
+        node [pos=0.7, below left, anchor=north east] {$ZY$} ++(135:1);
+\end{karnaugh-map}
+\begin{align}
+B &= (W_2 X_2' Y_2') + (W_2' X_2) \notag
+\end{align}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{K-maps }
+\begin{columns}
+\begin{column}{0.5\textwidth}
+\begin{karnaugh-map}[4][4][1][][]
+    \maxterms{0,1,2,5}
+    \minterms{3,4}
+    \indeterminants{6,7,8,9,10,11,12,13,14,15}
+    \implicant{4}{8}
+    \implicant{3}{11}
+    \draw[color=black, ultra thin] (0,4) --
+        node [pos=0.7, above right, anchor=south west] {$XW$}
+        node [pos=0.7, below left, anchor=north east] {$ZY$} ++(135:1);
+\end{karnaugh-map}
+\begin{align}
+C &= (W_2 X_2) + (W_2' X_2' Y_2) \notag
+\end{align}
+\end{column}
+
+\begin{column}{0.5\textwidth}
+\begin{align}
+D &= 0 \notag
+\end{align}
+\end{column}
+\end{columns}
+\end{frame}
+
+
+
+
+\begin{frame}{Hours Ones (Tens = 2 → 0-3)}
+\centering
+\begin{tabular}{|c|c||c|c|c|c|}
+\hline
+X & W & D & C & B & A\\
+\hline
+0&0&0&0&0&1\\
+0&1&0&0&1&0\\
+1&0&0&0&1&1\\
+1&1&0&0&0&0\\
+\hline
+\end{tabular}
+\end{frame}
+
+
+\begin{frame}{ K-maps}
+\begin{columns}
+\begin{column}{0.5\textwidth}
+\begin{karnaugh-map}[2][2][1][][]
+    \minterms{0,2}
+    \maxterms{3,1}
+
+    \implicant{0}{2}
+    \draw[color=black, ultra thin] (0, 2) --
+        node [pos=0.7, above right, anchor=south west] {$W$}
+        node [pos=0.7, below left, anchor=north east] {$X$} 
+        ++(135:1);
+\end{karnaugh-map}
+\begin{align}
+A &= W_5' \notag
+\end{align}
+\end{column}
+
+\begin{column}{0.5\textwidth}
+\begin{karnaugh-map}[2][2][1][][]
+    \minterms{1,2}
+    \maxterms{3,0}
+
+    \implicant{1}{1}
+    \implicant{2}{2}
+
+    \draw[color=black, ultra thin] (0, 2) --
+        node [pos=0.7, above right, anchor=south west] {$W$}
+        node [pos=0.7, below left, anchor=north east] {$X$} 
+        ++(135:1);
+\end{karnaugh-map}
+\begin{align}
+B &= (W_5 X_5') + (W_5' X_5) \notag
+\end{align}
+\end{column}
+\end{columns}
+\begin{align}
+    C &= 0\\ \notag
+    D &= 0 \notag
+\end{align}
+
+\end{frame}
+
+\begin{frame}{Hours Tens (0-2)}
+\centering
+\begin{tabular}{|c|c||c|c|c|c|}
+\hline
+X & W & D & C & B & A\\
+\hline
+0&0&0&0&0&1\\
+0&1&0&0&0&0\\
+1&0&0&0&0&0\\
+\hline
+\end{tabular}
+\end{frame}
+
+\begin{frame}{ K-maps}
+\begin{columns}
+\begin{column}{0.5\textwidth}
+\begin{karnaugh-map}[2][2][1][][]
+    \minterms{0}
+    \maxterms{2,1}
+    \indeterminants{3}
+
+    \implicant{0}{0}
+    \draw[color=black, ultra thin] (0, 2) --
+        node [pos=0.7, above right, anchor=south west] {$W$}
+        node [pos=0.7, below left, anchor=north east] {$X$} 
+        ++(135:1);
+\end{karnaugh-map}
+\begin{align}
+A &= W_6' X_6' \notag
+\end{align}
+\end{column}
+
+\begin{column}{0.5\textwidth}
+\begin{karnaugh-map}[2][2][1][][]
+    \minterms{1}
+    \maxterms{2,0}
+    \indeterminants{3}
+
+    \implicant{1}{1}
+    \draw[color=black, ultra thin] (0, 2) --
+        node [pos=0.7, above right, anchor=south west] {$W$}
+        node [pos=0.7, below left, anchor=north east] {$X$} 
+        ++(135:1);
+\end{karnaugh-map}
+\begin{align}
+B &= W_6 X_6'\notag
+\end{align}
+\end{column}
+\end{columns}
+\begin{align}
+    C &= 0\\ \notag
+    D &= 0 \notag
+\end{align}
+
+\end{frame}
+
+\section{Decrement Logic}
+
+\begin{frame}{Seconds / Minutes / Hours (Tens= 0/1) Ones (0-9)}
+\centering
+\begin{tabular}{|c|c|c|c||c|c|c|c|}
+\hline
+Z & Y & X & W & D & C & B & A\\
+\hline
+0 & 0 & 0 & 0 & 1 & 0 & 0 & 1\\
+0 & 0 & 0 & 1 & 0 & 0 & 0 & 0\\
+0 & 0 & 1 & 0 & 0 & 0 & 0 & 1\\
+0 & 0 & 1 & 1 & 0 & 0 & 1 & 0\\
+0 & 1 & 0 & 0 & 0 & 0 & 1 & 1\\
+0 & 1 & 0 & 1 & 0 & 1 & 0 & 0\\
+0 & 1 & 1 & 0 & 0 & 1 & 0 & 1\\
+0 & 1 & 1 & 1 & 0 & 1 & 1 & 0\\
+1 & 0 & 0 & 0 & 0 & 1 & 1 & 1\\
+1 & 0 & 0 & 1 & 1 & 0 & 0 & 0\\
+\hline
+\end{tabular}
+\end{frame}
+
+\begin{frame}{K-maps}
+\begin{columns}
+\begin{column}{0.5\textwidth}
+\begin{karnaugh-map}[4][4][1][][]
+    \minterms{0,2,4,6,8}
+    \maxterms{1,3,5,7,9}
+    \indeterminants{10,11,12,13,14,15}
+    \implicantedge{0}{8}{2}{10}
+    \draw[color=black, ultra thin] (0,4) --
+        node [pos=0.7, above right, anchor=south west] {$XW$}
+        node [pos=0.7, below left, anchor=north east] {$ZY$} ++(135:1);
+\end{karnaugh-map}
+\begin{align}
+A &= W_1' \notag
+\end{align}
+\end{column}
+
+\begin{column}{0.5\textwidth}
+\begin{karnaugh-map}[4][4][1][][]
+    \minterms{3,4,7,8}
+    \maxterms{0,1,2,5,6,9}
+    \indeterminants{10,11,12,13,14,15}
+    \implicant{3}{7}
+    \implicant{4}{4}
+    \implicant{8}{8}
+    \draw[color=black, ultra thin] (0,4) --
+        node [pos=0.7, above right, anchor=south west] {$XW$}
+        node [pos=0.7, below left, anchor=north east] {$ZY$} ++(135:1);
+\end{karnaugh-map}
+\begin{align}
+B &= (X_1' W_1' ((Z_1' Y_1) + (Z_1 Y_1'))) + (Z_1' W_1 X_1) \notag
+\end{align}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{K-maps}
+\begin{columns}
+\begin{column}{0.5\textwidth}
+\begin{karnaugh-map}[4][4][1][][]
+    \minterms{5,6,7,8}
+    \maxterms{0,1,2,3,4,9}
+    \indeterminants{10,11,12,13,14,15}
+    \implicant{5}{7}
+    \implicant{7}{6}
+    \implicant{8}{8}
+    \draw[color=black, ultra thin] (0,4) --
+        node [pos=0.7, above right, anchor=south west] {$XW$}
+        node [pos=0.7, below left, anchor=north east] {$ZY$} ++(135:1);
+\end{karnaugh-map}
+\begin{align}
+C &= (Z_1' Y_1 (X_1 + W_1)) + (Z_1 X_1' W_1' Y_1') \notag
+\end{align}
+\end{column}
+
+\begin{column}{0.5\textwidth}
+\begin{karnaugh-map}[4][4][1][][]
+    \minterms{0,9}
+    \maxterms{1,2,3,4,5,6,7,8}
+    \indeterminants{10,11,12,13,14,15}
+    \implicant{0}{0}
+    \implicant{9}{9}
+    \draw[color=black, ultra thin] (0,4) --
+        node [pos=0.7, above right, anchor=south west] {$XW$}
+        node [pos=0.7, below left, anchor=north east] {$ZY$} ++(135:1);
+\end{karnaugh-map}
+\begin{align}
+D &= X_1' Y_1' ((Z_1 W_1) + (Z_1' W_1')) \notag
+\end{align}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Seconds / Minutes Tens (0-5)}
+\centering
+\begin{tabular}{|c|c|c|c||c|c|c|c|}
+\hline
+Z & Y & X & W & D & C & B & A\\
+\hline
+0 & 0 & 0 & 0 & 0 & 1 & 0 & 1\\
+0 & 0 & 0 & 1 & 0 & 0 & 0 & 0\\
+0 & 0 & 1 & 0 & 0 & 0 & 0 & 1\\
+0 & 0 & 1 & 1 & 0 & 0 & 1 & 0\\
+0 & 1 & 0 & 0 & 0 & 0 & 1 & 1\\
+0 & 1 & 0 & 1 & 0 & 1 & 0 & 0\\
+\hline
+\end{tabular}
+\end{frame}
+
+\begin{frame}{K-maps}
+\begin{columns}
+\begin{column}{0.5\textwidth}
+\begin{karnaugh-map}[4][4][1][][]
+    \minterms{0,2,4}
+    \maxterms{1,3,5}
+    \indeterminants{6,7,8,9,10,11,12,13,14,15}
+    \implicantedge{0}{8}{2}{10}
+    \draw[color=black, ultra thin] (0,4) --
+        node [pos=0.7, above right, anchor=south west] {$XW$}
+        node [pos=0.7, below left, anchor=north east] {$ZY$} ++(135:1);
+\end{karnaugh-map}
+\begin{align}
+A &= W_2' \notag
+\end{align}
+\end{column}
+
+\begin{column}{0.5\textwidth}
+\begin{karnaugh-map}[4][4][1][][]
+    \minterms{3,4}
+    \maxterms{0,1,2,5}
+    \indeterminants{6,7,8,9,10,11,12,13,14,15}
+    \implicantedge{3}{3}{11}{11}
+    \implicant{4}{12}
+    \draw[color=black, ultra thin] (0,4) --
+        node [pos=0.7, above right, anchor=south west] {$XW$}
+        node [pos=0.7, below left, anchor=north east] {$ZY$} ++(135:1);
+\end{karnaugh-map}
+\begin{align}
+B &= (Y_2 X_2' W_2') + (Y_2' X_2 W_2) \notag
+\end{align}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{K-maps}
+\begin{columns}
+\begin{column}{0.5\textwidth}
+\begin{karnaugh-map}[4][4][1][][]
+    \minterms{0,5}
+    \maxterms{4,1,2,3}
+    \indeterminants{6,7,8,9,10,11,12,13,14,15}
+    \implicantedge{0}{0}{8}{8}
+    \implicant{5}{13}
+    \draw[color=black, ultra thin] (0,4) --
+        node [pos=0.7, above right, anchor=south west] {$XW$}
+        node [pos=0.7, below left, anchor=north east] {$ZY$} ++(135:1);
+\end{karnaugh-map}
+\begin{align}
+C &= X_2' ((Y_2 W_2) + (Y_2' W_2')) \notag
+\end{align}
+\end{column}
+
+\begin{column}{0.5\textwidth}
+\begin{align}
+D &= 0 \notag
+\end{align}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Hours Ones (Tens = 2 → 0-3)}
+\centering
+\begin{tabular}{|c|c||c|c|c|c|}
+\hline
+X & W & D & C & B & A\\
+\hline
+0 & 0 & 0 & 0 & 1 & 1\\
+0 & 1 & 0 & 0 & 0 & 0\\
+1 & 0 & 0 & 0 & 0 & 1\\
+1 & 1 & 0 & 0 & 1 & 0\\
+\hline
+\end{tabular}
+\end{frame}
+
+\begin{frame}{K-maps}
+\begin{columns}
+\begin{column}{0.5\textwidth}
+\begin{karnaugh-map}[2][2][1][][]
+    \minterms{0,2}
+    \maxterms{1,3}
+    \implicant{0}{2}
+    \draw[color=black, ultra thin] (0,2) --
+        node [pos=0.7, above right, anchor=south west] {$W$}
+        node [pos=0.7, below left, anchor=north east] {$X$} ++(135:1);
+\end{karnaugh-map}
+\begin{align}
+A &= W_5' \notag
+\end{align}
+\end{column}
+
+\begin{column}{0.5\textwidth}
+\begin{karnaugh-map}[2][2][1][][]
+    \minterms{0,3}
+    \maxterms{1,2}
+    \implicant{0}{0}
+    \implicant{3}{3}
+    \draw[color=black, ultra thin] (0,2) --
+        node [pos=0.7, above right, anchor=south west] {$W$}
+        node [pos=0.7, below left, anchor=north east] {$X$} ++(135:1);
+\end{karnaugh-map}
+\begin{align}
+B &= (X_5 W_5) + (X_5' W_5') \notag
+\end{align}
+\end{column}
+\end{columns}
+\begin{align}
+C &= 0\\
+D &= 0 \notag
+\end{align}
+\end{frame}
+
+\begin{frame}{Hours Tens (0-2)}
+\centering
+\begin{tabular}{|c|c||c|c|c|c|}
+\hline
+X & W & D & C & B & A\\
+\hline
+0 & 0 & 0 & 0 & 1 & 0\\
+0 & 1 & 0 & 0 & 0 & 0\\
+1 & 0 & 0 & 0 & 0 & 1\\
+\hline
+\end{tabular}
+\end{frame}
+
+\begin{frame}{K-maps}
+\begin{columns}
+\begin{column}{0.5\textwidth}
+\begin{karnaugh-map}[2][2][1][][]
+    \minterms{2}
+    \maxterms{0,1}
+    \indeterminants{3}
+    \implicant{2}{2}
+    \draw[color=black, ultra thin] (0,2) --
+        node [pos=0.7, above right, anchor=south west] {$W$}
+        node [pos=0.7, below left, anchor=north east] {$X$} ++(135:1);
+\end{karnaugh-map}
+\begin{align}
+A &= X_6 W_6' \notag
+\end{align}
+\end{column}
+
+\begin{column}{0.5\textwidth}
+\begin{karnaugh-map}[2][2][1][][]
+    \minterms{0}
+    \maxterms{2,1}
+    \indeterminants{3}
+    \implicant{0}{0}
+    \draw[color=black, ultra thin] (0,2) --
+        node [pos=0.7, above right, anchor=south west] {$W$}
+        node [pos=0.7, below left, anchor=north east] {$X$} ++(135:1);
+\end{karnaugh-map}
+\begin{align}
+B &= X_6' W_6' \notag
+\end{align}
+\end{column}
+\end{columns}
+\begin{align}
+C &= 0\\
+D &= 0 \notag
+\end{align}
+\end{frame}
+
+
+\section{Hardware Build}
+\begin{frame}{Hardware Implementation}
+\begin{itemize}
+    \item Connect seven-segment displays to breadboard
+    \item Connect all segment outputs together (through resistors)
+    \item Make connections to IC7447 and buttons to Arduino
+    \item Add current-limiting resistors for LEDs
+    \item Add pull-down resistors for buttons
+\end{itemize}
+\begin{figure}[ht]
+\centering
+\includegraphics[width=0.4\textwidth]{figs/clock.jpg}
+\caption{Final Arduino-based Clock Implementation}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Tinkercad Simulation}
+\centering
+\includegraphics[width=0.6\textwidth]{figs/Clock_Tinkercad.png}
+\caption{Clock Tinkercad Simulation}
+\end{frame}
+
+\section{Conclusion}
+\begin{frame}{Summary}
+\begin{itemize}
+    \item Successfully implemented digital clock with editing features
+    \item Efficient multiplexing and minimal I/O usage
+    \item Complete increment/decrement logic implemented via Boolean expressions
+    \item Full digit-by-digit editing with constraints for hours, minutes, seconds
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Acknowledgment}
+\centering
+The complete source code and documentation can be found at:\\
+\url{https://github.com/Dhawal24112006/projects.git}
+
+\vspace{1cm}
+Thank You!
+\end{frame}
+
+\end{document}
+

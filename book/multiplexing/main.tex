@@ -1,0 +1,4 @@
+\section{Multiplexing Technique}
+\raggedright
+All BCD inputs (A-D) are shared among six seven-segment displays. Displays are enabled one at a time using EN[0..5] = D4-D9. Each digit is displayed for 1ms, creating a fast alternating effect that appears continuous. This saves I/O pins and allows full six-digit display.
+
