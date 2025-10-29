@@ -7,6 +7,8 @@
 \usepackage{karnaugh-map}
 \usepackage{cite}
 \usepackage{subcaption}
+\usepackage{float}
+\usepackage{placeins}
 
 \def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
     T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
@@ -56,6 +58,8 @@ Table \ref{tab:2.1}. Table \ref{tab:2.2} gives the connections between the Ardui
 \caption{Tinkercad Simulation of the Digital Clock}
 \label{fig:tinker}
 \end{figure}
+
+
 \begin{table}[!h]
 \centering
 \input{tables/table1}
@@ -80,6 +84,8 @@ Table \ref{tab:2.1}. Table \ref{tab:2.2} gives the connections between the Ardui
 \caption{BCD to 7-Segment Connections}
 \label{tab:3}
 \end{table}
+
+
 \section{Clock Logic}
 Here, we show how to design counters for the various displays in the clock.
 \input{increment-logic-and-truth-tables/main.tex}
@@ -88,6 +94,7 @@ Here, we show how to design counters for the various displays in the clock.
 \input{digit-editing-logic/main.tex}
 \input{control-implementation/main.tex}
 \input{software-implementation/main.tex}
+\newpage
 \input{execution/main.tex}
 \input{future-scope/main.tex}
 \bibliographystyle{IEEEtran}
