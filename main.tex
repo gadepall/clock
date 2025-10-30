@@ -31,6 +31,13 @@
 \begin{abstract}
 In this paper the design and implementation of a feature-rich digital clock is demonstrated. The system uses multiplexing to drive six seven-segment displays efficiently, minimizing I/O utilization. Key functionalities include timekeeping, digit-by-digit editing, and pause/play control. Boolean-based increment and decrement logic ensures more accurate cascading of seconds, minutes, and hours within standard constraints. The hardware setup, complemented by software debouncing and display refreshing, demonstrates a reliable, compact, and user-interactive digital clock suitable for both educational and practical applications.
 \end{abstract}
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=\columnwidth]{figs/Clock_Tinkercad.png}
+%\includegraphics[width=0.45\textwidth]{figs/Clock_Tinkercad.png}
+\caption{Tinkercad Simulation of the Digital Clock}
+\label{fig:tinker}
+\end{figure}
 \section{Introduction}
 Digital timekeeping has long been a critical component of electronic system design, with classical digital design principles thoroughly discussed in foundational works such as \cite{mano2013digital, malvino2017digital, patterson2014computer}. The advent of microcontroller platforms, particularly Arduino, has enabled the development of compact, programmable clocks with enhanced user interactivity \cite{arduino_reference}. Techniques such as BCD-to-seven-segment interfacing and display multiplexing allow efficient utilization of limited I/O resources while maintaining accurate visual representation \cite{ti7447datasheet}. Inspired by these principles, a simple state machine representing a decade counter is  implemented in \cite{ddta}.  Based 
 on this, 
@@ -51,14 +58,8 @@ The six displays are connected to the arduino through the pin connections listed
 \end{table}
 Pin connections from the Arduino to the four push buttons are available in 
 Table \ref{tab:2.1}. Table \ref{tab:2.2} gives the connections between the Arduino and the IC 7447 display decoder.  .  Further, the pin connections for the IC 7447 to all the displays are available in Table \ref{tab:3}.
-\begin{figure}[!ht]
-\centering
-\includegraphics[width=\columnwidth]{figs/Clock_Tinkercad.png}
-%\includegraphics[width=0.45\textwidth]{figs/Clock_Tinkercad.png}
-\caption{Tinkercad Simulation of the Digital Clock}
-\label{fig:tinker}
-\end{figure}
 
+\input{figs/fig09}
 
 \begin{table}[!h]
 \centering
@@ -84,18 +85,18 @@ Table \ref{tab:2.1}. Table \ref{tab:2.2} gives the connections between the Ardui
 \caption{BCD to 7-Segment Connections}
 \label{tab:3}
 \end{table}
-
-
 \section{Clock Logic}
-Here, we show how to design counters for the various displays in the clock.
+Here, we discuss how to design counters for the various displays in the clock.
 \input{increment-logic-and-truth-tables/main.tex}
+\section{Control Logic and Implementation}
 \input{decrement-logic/main.tex}
 \input{multiplexing/main.tex}
 \input{digit-editing-logic/main.tex}
 \input{control-implementation/main.tex}
+\section{Software}
 \input{software-implementation/main.tex}
-\newpage
-\input{execution/main.tex}
+%\newpage
+%\input{execution/main.tex}
 \input{future-scope/main.tex}
 \bibliographystyle{IEEEtran}
 \bibliography{references/references}
