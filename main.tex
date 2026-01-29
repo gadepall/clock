@@ -92,7 +92,7 @@ G. V. V. Sharma \\[0.3em]
 \texttt{gadepall@ee.iith.ac.in}
 }
 
-\today
+\date{\today}
 %\date{January 08, 2026}
 
 \begingroup
@@ -158,8 +158,15 @@ Pin connections from the Arduino to the four push buttons are available in Table
 \label{tab:3}
 \end{table}
 
+
 \section{Clock Logic}
 Here, we discuss how to design counters for the various displays in the clock.
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.5\textwidth]{figs/clock.jpg}
+\caption{Final Arduino-based Clock Implementation}
+\end{figure}
+
 \input{increment-logic-and-truth-tables/main.tex}
 
 \section{Control Logic and Implementation}
