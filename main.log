@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025/Termux) (preloaded format=pdflatex 2026.1.25)  29 JAN 2026 20:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025/Termux) (preloaded format=pdflatex 2026.1.25)  29 JAN 2026 21:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1193,14 +1193,8 @@ Package pdftex.def Info: figs/Clock_Tinkercad.png  used on input line 112.
 
 {/data/data/com.termux/files/usr/share/texlive/2025/texmf-var/fonts/map/pdftex/
 updmap/pdftex.map}] (./tables/table2.3.tex) [2 <./figs/Clock_Tinkercad.png>] (.
-/tables/table1.tex) (./tables/table2.1.tex) (./tables/table2.2.tex) [3] (./tabl
-es/table3.tex)
-<figs/clock.jpg, id=122, 2782.395pt x 2304.61pt>
-File: figs/clock.jpg Graphic file (type jpg)
-<use figs/clock.jpg>
-Package pdftex.def Info: figs/clock.jpg  used on input line 166.
-(pdftex.def)             Requested size: 234.8775pt x 194.53539pt.
-(./increment-logic-and-truth-tables/main.tex
+/tables/table1.tex) (./tables/table2.1.tex) (./tables/table2.2.tex) (./tables/t
+able3.tex) [3] (./increment-logic-and-truth-tables/main.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 5.
@@ -1213,7 +1207,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 5.
 
-(./figs/fig09.tex [4 <./figs/clock.jpg>] (./tables/logic/table4.tex)
+(./figs/fig09.tex (./tables/logic/table4.tex)
 
 Package karnaugh-map Warning: The API for specifying variable labels have been 
 updated. You are currently using the old API(v1). In the new API each variable 
@@ -1330,14 +1324,14 @@ Overfull \hbox (38.36472pt too wide) in paragraph at lines 60--61
 \@karnaughmap@local@southeast@=\count428
 \@karnaughmap@local@northwest@=\count429
 \@karnaughmap@local@southeast@=\count430
-)) [5] [6] [7] (./decrement-logic/main.tex (./tables/decrement.tex (./decrement
+)) [4] [5] [6] (./decrement-logic/main.tex (./tables/decrement.tex (./decrement
 -logic/tables/table8.tex) (./decrement-logic/tables/table9.tex) (./decrement-lo
 gic/tables/table10.tex) (./decrement-logic/tables/table11.tex)
 
 LaTeX Warning: Float too large for page by 90.56969pt on input line 33.
 
 )) (./multiplexing/main.tex) (./digit-editing-logic/main.tex) (./control-implem
-entation/main.tex [8]) [9] [10] (./software-implementation/main.tex
+entation/main.tex [7]) [8] [9] (./software-implementation/main.tex
 Overfull \hbox (6.79999pt too wide) in paragraph at lines 4--12
 [] 
  []
@@ -1345,7 +1339,7 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 4--12
 ) (./future-scope/main.tex) (./main.bbl
 LaTeX Font Info:    Font shape `OT1/cmss/m/it' in size <10.95> not available
 (Font)              Font shape `OT1/cmss/m/sl' tried instead on input line 10.
-) [11
+) [10
 
 {/data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/fonts/enc/dvips/
 cm-super/cm-super-ts1.enc}] (./main.aux)
@@ -1357,13 +1351,13 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 273117100A72B8D261A04619421C0DDF;2099.
  ) 
 Here is how much of TeX's memory you used:
- 29003 strings out of 467532
- 539380 string characters out of 5405395
- 1106070 words of memory out of 5000000
- 57282 multiletter control sequences out of 15000+600000
+ 28994 strings out of 467532
+ 539210 string characters out of 5405395
+ 1108531 words of memory out of 5000000
+ 57275 multiletter control sequences out of 15000+600000
  640022 words of font info for 87 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 103i,19n,108p,1308b,2070s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 103i,19n,108p,1193b,2070s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/fonts/type1/pu
 blic/amsfonts/cm/cmex10.pfb></data/data/com.termux/files/usr/share/texlive/2025
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></data/data/com.termux/fi
@@ -1388,10 +1382,10 @@ ata/com.termux/files/usr/share/texlive/2025/texmf-dist/fonts/type1/public/amsfo
 nts/cm/cmtt10.pfb></data/data/com.termux/files/usr/share/texlive/2025/texmf-dis
 t/fonts/type1/public/amsfonts/cm/cmtt12.pfb></data/data/com.termux/files/usr/sh
 are/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfss1095.pfb>
-Output written on main.pdf (11 pages, 1947473 bytes).
+Output written on main.pdf (10 pages, 347074 bytes).
 PDF statistics:
- 299 PDF objects out of 1000 (max. 8388607)
- 244 compressed objects within 3 object streams
- 68 named destinations out of 1000 (max. 500000)
- 135 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 293 PDF objects out of 1000 (max. 8388607)
+ 240 compressed objects within 3 object streams
+ 66 named destinations out of 1000 (max. 500000)
+ 130 words of extra memory for PDF output out of 10000 (max. 10000000)
 

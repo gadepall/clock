@@ -116,7 +116,7 @@ In this paper the design and implementation of a feature-rich digital clock is d
 
 % ---------------- Sections ----------------
 \section{Introduction}
-Digital timekeeping has long been a critical component of electronic system design, with classical digital design principles thoroughly discussed in foundational works such as \cite{mano2013digital, malvino2017digital, patterson2014computer}. The advent of microcontroller platforms, particularly Arduino, has enabled the development of compact, programmable clocks with enhanced user interactivity \cite{arduino_reference}. Techniques such as BCD-to-seven-segment interfacing and display multiplexing allow efficient utilization of limited I/O resources while maintaining accurate visual representation \cite{ti7447datasheet}. Inspired by these principles, a simple state machine representing a decade counter is implemented in \cite{ddta}. Based on this, we design an Arduino-based digital clock featuring six-digit multiplexed displays, pause/play functionality, and digit-by-digit editing with Boolean logic-driven increment and decrement operations.The novelty of the paper lies in the fact that the state machine given in Fig.~\ref{fig:tinker} is implemented using flip flops and combinational logic with feedback. To the best of our knowledge, such a design is not available in existing literature. Most digital clock designs rely on counters as the building blocks.
+Digital timekeeping has long been a critical component of electronic system design, with classical digital design principles thoroughly discussed in foundational works such as \cite{mano2013digital, malvino2017digital, patterson2014computer}. The advent of microcontroller platforms, particularly Arduino, has enabled the development of compact, programmable clocks with enhanced user interactivity \cite{arduino_reference}. Techniques such as BCD-to-seven-segment interfacing and display multiplexing allow efficient utilization of limited I/O resources while maintaining accurate visual representation \cite{ti7447datasheet}. Inspired by these principles, a simple state machine representing a decade counter is implemented in \cite{ddta}. Based on this, we design an Arduino-based digital clock featuring six-digit multiplexed displays, pause/play functionality, and digit-by-digit editing with Boolean logic-driven increment and decrement operations. Most digital clock designs rely on standard counters as the building blocks.  However, our design is simpler since it relies on the state machine in \cite{ddta}.
 
 \section{Clock Functionality and Hardware Setup}
 Fig.~\ref{fig:tinker} shows the various hardware connections and the corresponding components are listed in Table~\ref{tab:component}. The clock follows the 23:59:59 format using six displays. The first two represent hours, the next two denote minutes, and the last two count the seconds. The six displays are connected to the Arduino through the pin connections listed in Table~\ref{tab:2.3}. The number count for each display is also listed therein.
@@ -161,11 +161,11 @@ Pin connections from the Arduino to the four push buttons are available in Table
 
 \section{Clock Logic}
 Here, we discuss how to design counters for the various displays in the clock.
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.5\textwidth]{figs/clock.jpg}
-\caption{Final Arduino-based Clock Implementation}
-\end{figure}
+%\begin{figure}[H]
+%\centering
+%\includegraphics[width=0.5\textwidth]{figs/clock.jpg}
+%\caption{Final Arduino-based Clock Implementation}
+%\end{figure}
 
 \input{increment-logic-and-truth-tables/main.tex}
 

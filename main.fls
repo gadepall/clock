@@ -372,11 +372,6 @@ INPUT ./tables/table3.tex
 INPUT ./tables/table3.tex
 INPUT ./tables/table3.tex
 INPUT tables/table3.tex
-INPUT ./figs/clock.jpg
-INPUT ./figs/clock.jpg
-INPUT ./figs/clock.jpg
-INPUT ./figs/clock.jpg
-INPUT ./figs/clock.jpg
 INPUT ./increment-logic-and-truth-tables/main.tex
 INPUT ./increment-logic-and-truth-tables/main.tex
 INPUT increment-logic-and-truth-tables/main.tex
