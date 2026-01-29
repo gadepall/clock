@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex main"] 1769698502.05903 "main.aux" "main.bbl" "main" 1769698508.32834 0
+["bibtex main"] 1769699605.69623 "main.aux" "main.bbl" "main" 1769699611.05065 0
   "./references/references.bib" 1769698145 1179 c2de600f972812a63bd7234357582ea5 ""
   "/data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/bibtex/bst/natbib/plainnat.bst" 1233624470 26816 ffe5423d2019860bad9f54bc402fac15 ""
-  "main.aux" 1769698507 7078 92bb877fa0a980b3942cb5a7e7cf34a2 "pdflatex"
+  "main.aux" 1769699610 7243 9331732b4c741fc1d6ef61a17cecf3d9 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1769698502.20401 "main.tex" "main.pdf" "main" 1769698508.33015 0
+["pdflatex"] 1769699605.79611 "main.tex" "main.pdf" "main" 1769699611.05215 0
   "/data/data/com.termux/files/usr/share/texlive/2025.0/texmf-dist/web2c/texmf.cnf" 1768516933 42356 f62ae7f3325ea805428eb7f006288d9f ""
   "/data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -227,16 +227,17 @@
   "decrement-logic/tables/table9.tex" 1769698145 295 cd763369a9ee289a929cb114ff664e98 ""
   "digit-editing-logic/main.tex" 1769698145 543 60553e4698e877d461de7f0c01cb5e56 ""
   "figs/Clock_Tinkercad.png" 1769698145 188040 cb23ce05d5cae856824c5f37746cdb10 ""
+  "figs/clock.jpg" 1769698145 1599739 ac5bcf3d26ae5ef330e50f68e232d3cd ""
   "figs/fig02.tex" 1769698145 1432 626dfd400d77b1486496636af64b7e94 ""
   "figs/fig03.tex" 1769698145 1974 55c0b9b8c5d6005e569f9cb26791282b ""
   "figs/fig05.tex" 1769698145 2187 a1b026793125fea851dc6d10d04c5cb2 ""
   "figs/fig09.tex" 1769698145 3009 7bf39303c96dbc66f08c2c17effe2b13 ""
   "future-scope/main.tex" 1769698145 924 cda812ff6d286b4ee9ba1633a87de4c9 ""
   "increment-logic-and-truth-tables/main.tex" 1769698145 1661 0bbbcb758af4b053b2a0c58e1c09c8a6 ""
-  "main.aux" 1769698507 7078 92bb877fa0a980b3942cb5a7e7cf34a2 "pdflatex"
-  "main.bbl" 1769698502 1355 47a9154732276bb6ebedfb20012e33df "bibtex main"
-  "main.out" 1769698507 2099 273117100a72b8d261a04619421c0ddf "pdflatex"
-  "main.tex" 1769698491 6895 fc1ead3faa3fdc97358c237632529acc ""
+  "main.aux" 1769699610 7243 9331732b4c741fc1d6ef61a17cecf3d9 "pdflatex"
+  "main.bbl" 1769699605 1355 47a9154732276bb6ebedfb20012e33df "bibtex main"
+  "main.out" 1769699610 2099 273117100a72b8d261a04619421c0ddf "pdflatex"
+  "main.tex" 1769699587 7051 caef28e36492146e31cadbd00cc1ed3b ""
   "multiplexing/main.tex" 1769698145 337 232297fb11fccf62e8af7b67fd09bf5d ""
   "software-implementation/main.tex" 1769698145 941 3a64c6c6ebf3583a4ff6719bd6178090 ""
   "tables/decrement.tex" 1769698145 846 62eb702baecc9d5902d55b87b667fb0c ""

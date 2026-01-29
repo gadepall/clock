@@ -309,7 +309,6 @@ OUTPUT main.out
 INPUT /data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/tex/latex/cjk/texinput/UTF8/UTF8.bdg
 INPUT /data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/tex/latex/cjk/texinput/UTF8/UTF8.enc
 INPUT /data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/tex/latex/cjk/texinput/UTF8/UTF8.chr
-INPUT /data/data/com.termux/files/usr/share/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map
 INPUT /data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmss17.tfm
 INPUT /data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmssbx10.tfm
 INPUT /data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmss12.tfm
@@ -346,6 +345,7 @@ INPUT ./figs/Clock_Tinkercad.png
 INPUT ./figs/Clock_Tinkercad.png
 INPUT ./figs/Clock_Tinkercad.png
 INPUT ./figs/Clock_Tinkercad.png
+INPUT /data/data/com.termux/files/usr/share/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map
 INPUT /data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmss12.tfm
 INPUT /data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmssbx10.tfm
 INPUT ./tables/table2.3.tex
@@ -372,6 +372,11 @@ INPUT ./tables/table3.tex
 INPUT ./tables/table3.tex
 INPUT ./tables/table3.tex
 INPUT tables/table3.tex
+INPUT ./figs/clock.jpg
+INPUT ./figs/clock.jpg
+INPUT ./figs/clock.jpg
+INPUT ./figs/clock.jpg
+INPUT ./figs/clock.jpg
 INPUT ./increment-logic-and-truth-tables/main.tex
 INPUT ./increment-logic-and-truth-tables/main.tex
 INPUT increment-logic-and-truth-tables/main.tex
