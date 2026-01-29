@@ -345,9 +345,9 @@ INPUT ./figs/Clock_Tinkercad.png
 INPUT ./figs/Clock_Tinkercad.png
 INPUT ./figs/Clock_Tinkercad.png
 INPUT ./figs/Clock_Tinkercad.png
-INPUT /data/data/com.termux/files/usr/share/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map
 INPUT /data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmss12.tfm
 INPUT /data/data/com.termux/files/usr/share/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmssbx10.tfm
+INPUT /data/data/com.termux/files/usr/share/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map
 INPUT ./tables/table2.3.tex
 INPUT ./tables/table2.3.tex
 INPUT tables/table2.3.tex
