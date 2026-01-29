@@ -1,0 +1,12 @@
+b1             6   3  0  # set_io b1 5
+b2             8   3  0  # set_io b2 6
+$iopadmap$main.disp  14   3  0  # set_io disp(0) 64
+$iopadmap$main.disp_1  16   3  0  # set_io disp(1) 62
+$iopadmap$main.disp_2  18   3  0  # set_io disp(2) 63
+$iopadmap$main.disp_3  20   3  0  # set_io disp(3) 61
+$iopadmap$main.power  22   3  0  # set_io power(0) 60
+$iopadmap$main.power_1  24   3  0  # set_io power(1) 59
+$iopadmap$main.power_2  26   3  0  # set_io power(2) 57
+$iopadmap$main.power_3  28   3  0  # set_io power(3) 56
+$iopadmap$main.power_4  30   3  0  # set_io power(4) 55
+$iopadmap$main.power_5  32   3  0  # set_io power(5) 54

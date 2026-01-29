@@ -1,0 +1,206 @@
+-t
+adding top
+main
+-v
+/home/dhawal/clock/codes/codes_verilog/clock.v
+-d
+ql-eos-s3_wlcsp
+-p
+/home/dhawal/clock/codes/codes_verilog/quickfeather.pcf
+-P
+PU64
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2020  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.33 (git sha1 2584903a060)
+
+
+-- Parsing `/home/dhawal/clock/codes/codes_verilog/clock.v' using frontend ` -vlog2k' --
+
+1. Executing Verilog-2005 frontend: /home/dhawal/clock/codes/codes_verilog/clock.v
+Parsing Verilog input from `/home/dhawal/clock/codes/codes_verilog/clock.v' to AST representation.
+Storing AST representation for module `$abstract\clock'.
+Storing AST representation for module `$abstract\main'.
+Successfully finished Verilog frontend.
+
+-- Running command `tcl /home/dhawal/symbiflow/quicklogic-arch-defs/share/quicklogic/synth.tcl' --
+[TCL: yosys -import] Command name collision: found pre-existing command `cd' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `eval' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `exec' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `read' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `trace' -> skip.
+
+2. Executing Verilog-2005 frontend: /home/dhawal/symbiflow/quicklogic-arch-defs/share/techmaps/quicklogic/pp3/techmap/cells_sim.v
+Parsing Verilog input from `/home/dhawal/symbiflow/quicklogic-arch-defs/share/techmaps/quicklogic/pp3/techmap/cells_sim.v' to AST representation.
+Generating RTLIL representation for module `\VCC'.
+Generating RTLIL representation for module `\GND'.
+Generating RTLIL representation for module `\fpga_interconnect'.
+Generating RTLIL representation for module `\CLOCK_CELL'.
+Generating RTLIL representation for module `\BIDIR_CELL'.
+Generating RTLIL representation for module `\SDIOMUX_CELL'.
+Generating RTLIL representation for module `\T_FRAG'.
+Generating RTLIL representation for module `\B_FRAG'.
+Generating RTLIL representation for module `\Q_FRAG'.
+Generating RTLIL representation for module `\F_FRAG'.
+Generating RTLIL representation for module `\C_FRAG'.
+Generating RTLIL representation for module `\ASSP'.
+Generating RTLIL representation for module `\MULT'.
+Generating RTLIL representation for module `\GMUX_IP'.
+Generating RTLIL representation for module `\GMUX_IC'.
+Successfully finished Verilog frontend.
+
+3. Executing Verilog-2005 frontend: /home/dhawal/symbiflow/quicklogic-arch-defs/bin/../share/arch/ql-eos-s3_wlcsp/cells/ram_sim.v
+Parsing Verilog input from `/home/dhawal/symbiflow/quicklogic-arch-defs/bin/../share/arch/ql-eos-s3_wlcsp/cells/ram_sim.v' to AST representation.
+Generating RTLIL representation for module `\RAM_CE0_FE0_PR0_WSA0_WSB0_VPR'.
+Generating RTLIL representation for module `\RAM_CE0_FE0_PR0_WSA0_WSB1_VPR'.
+Generating RTLIL representation for module `\RAM_CE0_FE0_PR0_WSA1_WSB0_VPR'.
+Generating RTLIL representation for module `\RAM_CE0_FE0_PR0_WSA1_WSB1_VPR'.
+Generating RTLIL representation for module `\RAM_CE0_FE0_PR1_WSA0_WSB0_VPR'.
+Generating RTLIL representation for module `\RAM_CE0_FE0_PR1_WSA0_WSB1_VPR'.
+Generating RTLIL representation for module `\RAM_CE0_FE0_PR1_WSA1_WSB0_VPR'.
+Generating RTLIL representation for module `\RAM_CE0_FE0_PR1_WSA1_WSB1_VPR'.
+Generating RTLIL representation for module `\RAM_CE0_FE1_D0_PR0_WSA0_WSB0_VPR'.
+Generating RTLIL representation for module `\RAM_CE0_FE1_D0_PR0_WSA0_WSB1_VPR'.
+Generating RTLIL representation for module `\RAM_CE0_FE1_D0_PR0_WSA1_WSB0_VPR'.
+Generating RTLIL representation for module `\RAM_CE0_FE1_D0_PR0_WSA1_WSB1_VPR'.
+Generating RTLIL representation for module `\RAM_CE0_FE1_D0_PR1_WSA0_WSB0_VPR'.
+Generating RTLIL representation for module `\RAM_CE0_FE1_D0_PR1_WSA0_WSB1_VPR'.
+Generating RTLIL representation for module `\RAM_CE0_FE1_D0_PR1_WSA1_WSB0_VPR'.
+Generating RTLIL representation for module `\RAM_CE0_FE1_D0_PR1_WSA1_WSB1_VPR'.
+Generating RTLIL representation for module `\RAM_CE0_FE1_D1_PR0_WSA0_WSB0_VPR'.
+Generating RTLIL representation for module `\RAM_CE0_FE1_D1_PR0_WSA0_WSB1_VPR'.
+Generating RTLIL representation for module `\RAM_CE0_FE1_D1_PR0_WSA1_WSB0_VPR'.
+Generating RTLIL representation for module `\RAM_CE0_FE1_D1_PR0_WSA1_WSB1_VPR'.
+Generating RTLIL representation for module `\RAM_CE0_FE1_D1_PR1_WSA0_WSB0_VPR'.
+Generating RTLIL representation for module `\RAM_CE0_FE1_D1_PR1_WSA0_WSB1_VPR'.
+Generating RTLIL representation for module `\RAM_CE0_FE1_D1_PR1_WSA1_WSB0_VPR'.
+Generating RTLIL representation for module `\RAM_CE0_FE1_D1_PR1_WSA1_WSB1_VPR'.
+Generating RTLIL representation for module `\RAM_CE1_FE0_PR0_WSA0_WSB0_VPR'.
+Generating RTLIL representation for module `\RAM_CE1_FE0_PR0_WSA0_WSB1_VPR'.
+Generating RTLIL representation for module `\RAM_CE1_FE0_PR0_WSA0_WSB2_VPR'.
+Generating RTLIL representation for module `\RAM_CE1_FE0_PR0_WSA1_WSB0_VPR'.
+Generating RTLIL representation for module `\RAM_CE1_FE0_PR0_WSA1_WSB1_VPR'.
+Generating RTLIL representation for module `\RAM_CE1_FE0_PR0_WSA1_WSB2_VPR'.
+Generating RTLIL representation for module `\RAM_CE1_FE0_PR0_WSA2_WSB0_VPR'.
+Generating RTLIL representation for module `\RAM_CE1_FE0_PR0_WSA2_WSB1_VPR'.
+Generating RTLIL representation for module `\RAM_CE1_FE0_PR0_WSA2_WSB2_VPR'.
+Generating RTLIL representation for module `\RAM_CE1_FE0_PR1_WSA0_WSB0_VPR'.
+Generating RTLIL representation for module `\RAM_CE1_FE0_PR1_WSA0_WSB1_VPR'.
+Generating RTLIL representation for module `\RAM_CE1_FE0_PR1_WSA0_WSB2_VPR'.
+Generating RTLIL representation for module `\RAM_CE1_FE0_PR1_WSA1_WSB0_VPR'.
+Generating RTLIL representation for module `\RAM_CE1_FE0_PR1_WSA1_WSB1_VPR'.
+Generating RTLIL representation for module `\RAM_CE1_FE0_PR1_WSA1_WSB2_VPR'.
+Generating RTLIL representation for module `\RAM_CE1_FE0_PR1_WSA2_WSB0_VPR'.
+Generating RTLIL representation for module `\RAM_CE1_FE0_PR1_WSA2_WSB1_VPR'.
+Generating RTLIL representation for module `\RAM_CE1_FE0_PR1_WSA2_WSB2_VPR'.
+Generating RTLIL representation for module `\RAM_CE1_FE1_D0_PR0_WSA0_WSB0_VPR'.
+Generating RTLIL representation for module `\RAM_CE1_FE1_D0_PR0_WSA0_WSB1_VPR'.
+Generating RTLIL representation for module `\RAM_CE1_FE1_D0_PR0_WSA0_WSB2_VPR'.
+Generating RTLIL representation for module `\RAM_CE1_FE1_D0_PR0_WSA1_WSB0_VPR'.
+Generating RTLIL representation for module `\RAM_CE1_FE1_D0_PR0_WSA1_WSB1_VPR'.
+Generating RTLIL representation for module `\RAM_CE1_FE1_D0_PR0_WSA1_WSB2_VPR'.
+Generating RTLIL representation for module `\RAM_CE1_FE1_D0_PR0_WSA2_WSB0_VPR'.
+Generating RTLIL representation for module `\RAM_CE1_FE1_D0_PR0_WSA2_WSB1_VPR'.
+Generating RTLIL representation for module `\RAM_CE1_FE1_D0_PR0_WSA2_WSB2_VPR'.
+Generating RTLIL representation for module `\RAM_CE1_FE1_D0_PR1_WSA0_WSB0_VPR'.
+Generating RTLIL representation for module `\RAM_CE1_FE1_D0_PR1_WSA0_WSB1_VPR'.
+Generating RTLIL representation for module `\RAM_CE1_FE1_D0_PR1_WSA0_WSB2_VPR'.
+Generating RTLIL representation for module `\RAM_CE1_FE1_D0_PR1_WSA1_WSB0_VPR'.
+Generating RTLIL representation for module `\RAM_CE1_FE1_D0_PR1_WSA1_WSB1_VPR'.
+Generating RTLIL representation for module `\RAM_CE1_FE1_D0_PR1_WSA1_WSB2_VPR'.
+Generating RTLIL representation for module `\RAM_CE1_FE1_D0_PR1_WSA2_WSB0_VPR'.
+Generating RTLIL representation for module `\RAM_CE1_FE1_D0_PR1_WSA2_WSB1_VPR'.
+Generating RTLIL representation for module `\RAM_CE1_FE1_D0_PR1_WSA2_WSB2_VPR'.
+Generating RTLIL representation for module `\RAM_CE1_FE1_D1_PR0_WSA0_WSB0_VPR'.
+Generating RTLIL representation for module `\RAM_CE1_FE1_D1_PR0_WSA0_WSB1_VPR'.
+Generating RTLIL representation for module `\RAM_CE1_FE1_D1_PR0_WSA0_WSB2_VPR'.
+Generating RTLIL representation for module `\RAM_CE1_FE1_D1_PR0_WSA1_WSB0_VPR'.
+Generating RTLIL representation for module `\RAM_CE1_FE1_D1_PR0_WSA1_WSB1_VPR'.
+Generating RTLIL representation for module `\RAM_CE1_FE1_D1_PR0_WSA1_WSB2_VPR'.
+Generating RTLIL representation for module `\RAM_CE1_FE1_D1_PR0_WSA2_WSB0_VPR'.
+Generating RTLIL representation for module `\RAM_CE1_FE1_D1_PR0_WSA2_WSB1_VPR'.
+Generating RTLIL representation for module `\RAM_CE1_FE1_D1_PR0_WSA2_WSB2_VPR'.
+Generating RTLIL representation for module `\RAM_CE1_FE1_D1_PR1_WSA0_WSB0_VPR'.
+Generating RTLIL representation for module `\RAM_CE1_FE1_D1_PR1_WSA0_WSB1_VPR'.
+Generating RTLIL representation for module `\RAM_CE1_FE1_D1_PR1_WSA0_WSB2_VPR'.
+Generating RTLIL representation for module `\RAM_CE1_FE1_D1_PR1_WSA1_WSB0_VPR'.
+Generating RTLIL representation for module `\RAM_CE1_FE1_D1_PR1_WSA1_WSB1_VPR'.
+Generating RTLIL representation for module `\RAM_CE1_FE1_D1_PR1_WSA1_WSB2_VPR'.
+Generating RTLIL representation for module `\RAM_CE1_FE1_D1_PR1_WSA2_WSB0_VPR'.
+Generating RTLIL representation for module `\RAM_CE1_FE1_D1_PR1_WSA2_WSB1_VPR'.
+Generating RTLIL representation for module `\RAM_CE1_FE1_D1_PR1_WSA2_WSB2_VPR'.
+Successfully finished Verilog frontend.
+Warning: delay target has not been set via SDC or scratchpad; assuming 12 MHz clock.
+
+4. Executing SYNTH_QUICKLOGIC pass.
+
+4.1. Executing Verilog-2005 frontend: /usr/bin/../share/yosys/quicklogic/cells_sim.v
+Parsing Verilog input from `/usr/bin/../share/yosys/quicklogic/cells_sim.v' to AST representation.
+Generating RTLIL representation for module `\inv'.
+Generating RTLIL representation for module `\buff'.
+Generating RTLIL representation for module `\logic_0'.
+Generating RTLIL representation for module `\logic_1'.
+Generating RTLIL representation for module `\gclkbuff'.
+Successfully finished Verilog frontend.
+
+4.2. Executing Verilog-2005 frontend: /usr/bin/../share/yosys/quicklogic/pp3_cells_sim.v
+Parsing Verilog input from `/usr/bin/../share/yosys/quicklogic/pp3_cells_sim.v' to AST representation.
+Generating RTLIL representation for module `\inpad'.
+Generating RTLIL representation for module `\outpad'.
+Generating RTLIL representation for module `\ckpad'.
+Generating RTLIL representation for module `\bipad'.
+Generating RTLIL representation for module `\dff'.
+Generating RTLIL representation for module `\dffc'.
+Generating RTLIL representation for module `\dffp'.
+Generating RTLIL representation for module `\dffpc'.
+Generating RTLIL representation for module `\dffe'.
+Generating RTLIL representation for module `\dffec'.
+Generating RTLIL representation for module `\dffepc'.
+Generating RTLIL representation for module `\AND2I0'.
+Generating RTLIL representation for module `\mux2x0'.
+Generating RTLIL representation for module `\mux2x1'.
+Generating RTLIL representation for module `\mux4x0'.
+Generating RTLIL representation for module `\mux8x0'.
+Generating RTLIL representation for module `\qlal4s3b_cell_macro'.
+Successfully finished Verilog frontend.
+
+4.3. Executing Verilog-2005 frontend: /usr/bin/../share/yosys/quicklogic/lut_sim.v
+Parsing Verilog input from `/usr/bin/../share/yosys/quicklogic/lut_sim.v' to AST representation.
+Generating RTLIL representation for module `\LUT1'.
+Generating RTLIL representation for module `\LUT2'.
+Generating RTLIL representation for module `\LUT3'.
+Generating RTLIL representation for module `\LUT4'.
+Successfully finished Verilog frontend.
+
+4.4. Executing HIERARCHY pass (managing design hierarchy).
+
+4.4.1. Finding top of design hierarchy..
+root of   0 design levels: $abstract\main      
+root of   0 design levels: $abstract\clock     
+Automatically selected $abstract\main as design top module.
+
+4.4.2. Executing AST frontend in derive mode using pre-parsed AST for module `\main'.
+Generating RTLIL representation for module `\main'.
+
+4.4.3. Analyzing design hierarchy..
+Top module:  \main
+
+4.4.4. Executing AST frontend in derive mode using pre-parsed AST for module `\clock'.
